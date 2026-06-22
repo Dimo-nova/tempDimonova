@@ -1,0 +1,15 @@
+{
+  "name": "dimonova-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dimonova marketing site — digital menus for restaurants, pubs & cafés.",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "node _build.js",
+    "test": "node _smoke-test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^23.2.0"
+  }
+}

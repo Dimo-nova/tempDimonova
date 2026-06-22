@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimonova — Digital menus, done for you</title>
+<meta name="description" content="Dimonova builds, styles and runs digital menus for restaurants, pubs and cafés. We build your menu, link it into your website, and train your team. You change a dish in two taps.">
+<meta name="theme-color" content="#FAF6F0">
+<meta property="og:title" content="Dimonova — Digital menus, done for you">
+<meta property="og:description" content="A menu worth showing off, built and set up for you. For restaurants, pubs & cafés.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%231F1814'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23B8523A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="min-height:100vh;background:#FAF6F0;color:#1F1814;overflow-x:hidden">
+
+  <!-- ================================================================ -->
+  <!-- HEADER                                                            -->
+  <!-- ================================================================ -->
+  <header style="position:sticky;top:0;z-index:50;background:transparent;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:none;transition:background .25s ease,box-shadow .25s ease">
+    <div class="dim-pad-h" style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 40px">
+      <button data-nav="home" style="display:flex;align-items:center;gap:10px">
+        <div style="width:28px;height:28px;border-radius:8px;background:#1F1814;display:flex;align-items:center;justify-content:center">
+          <div style="width:10px;height:10px;border-radius:50%;background:#B8523A"></div>
+        </div>
+        <div style="font:600 19px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.015em">Dimonova</div>
+      </button>
+
+      <nav class="dim-hide-md" style="display:flex;gap:32px;align-items:center;font:500 14px/1 'Instrument Sans',sans-serif">
+        <button data-nav="features" data-i18n="nav.features" style="color:#8A7E70;transition:color .15s">Features</button>
+        <button data-nav="pricing" data-i18n="nav.pricing" style="color:#8A7E70;transition:color .15s">Pricing</button>
+        <button data-nav="cases" data-i18n="nav.cases" style="color:#8A7E70;transition:color .15s">Case studies</button>
+        <button data-nav="about" data-i18n="nav.about" style="color:#8A7E70;transition:color .15s">About</button>
+        <button data-nav="contact" data-i18n="nav.contact" style="color:#8A7E70;transition:color .15s">Contact</button>
+      </nav>
+
+      <div class="dim-hide-md" style="display:flex;gap:10px;align-items:center">
+        <div data-lang-selector style="position:relative">
+          <button data-action="toggle-lang" aria-label="Choose language" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:9px 12px;display:inline-flex;align-items:center;gap:7px;border:1px solid #E8E0D2;border-radius:999px;background:#FAF6F0" data-hover="background:#F1E8DA">
+            <img data-lang-flag alt="" width="16" height="12" src="https://flagcdn.com/16x12/gb.png" style="display:block;border-radius:2px">
+            <span data-lang-code>EN</span>
+            <span style="font-size:9px;color:#8A7E70">&#9662;</span>
+          </button>
+          <div class="sc-if" data-if="langOpen" data-default="false">
+            <div class="dim-pop" style="position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid #E8E0D2;border-radius:14px;box-shadow:0 20px 40px -24px rgba(31,24,20,.25);padding:6px;min-width:188px;z-index:60">
+              <button data-lang="en" style="width:100%;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:transparent;font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;text-align:left" data-hover="background:#F1E8DA">
+                <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/gb.png" style="display:block;border-radius:2px">
+                <span style="width:20px">EN</span><span style="flex:1">English</span>
+                <span data-lang-dot="en" style="width:7px;height:7px;border-radius:50%;background:#B8523A;opacity:0"></span>
+              </button>
+              <button data-lang="es" style="width:100%;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:transparent;font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;text-align:left" data-hover="background:#F1E8DA">
+                <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/es.png" style="display:block;border-radius:2px">
+                <span style="width:20px">ES</span><span style="flex:1">Espa&#241;ol</span>
+                <span data-lang-dot="es" style="width:7px;height:7px;border-radius:50%;background:#B8523A;opacity:0"></span>
+              </button>
+              <button data-lang="de" style="width:100%;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:transparent;font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;text-align:left" data-hover="background:#F1E8DA">
+                <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/de.png" style="display:block;border-radius:2px">
+                <span style="width:20px">DE</span><span style="flex:1">Deutsch</span>
+                <span data-lang-dot="de" style="width:7px;height:7px;border-radius:50%;background:#B8523A;opacity:0"></span>
+              </button>
+              <button data-lang="fr" style="width:100%;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:transparent;font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;text-align:left" data-hover="background:#F1E8DA">
+                <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/fr.png" style="display:block;border-radius:2px">
+                <span style="width:20px">FR</span><span style="flex:1">Fran&#231;ais</span>
+                <span data-lang-dot="fr" style="width:7px;height:7px;border-radius:50%;background:#B8523A;opacity:0"></span>
+              </button>
+              <button data-lang="pt" style="width:100%;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:10px;background:transparent;font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;text-align:left" data-hover="background:#F1E8DA">
+                <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/pt.png" style="display:block;border-radius:2px">
+                <span style="width:20px">PT</span><span style="flex:1">Portugu&#234;s</span>
+                <span data-lang-dot="pt" style="width:7px;height:7px;border-radius:50%;background:#B8523A;opacity:0"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button data-action="toggle-wa" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:10px 14px;display:inline-flex;align-items:center;gap:8px;border:1px solid #E8E0D2;border-radius:999px;background:#FAF6F0" data-hover="background:#F1E8DA">
+          <span style="width:10px;height:10px;border-radius:50%;background:#25D366;display:inline-block"></span>
+          <span data-i18n="nav.whatsapp">WhatsApp</span>
+        </button>
+        <button data-nav="contact" data-i18n="nav.demo" style="font:600 13px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:12px 18px;border-radius:999px;transition:background .15s,transform .15s" data-hover="background:#9B4530;transform:translateY(-1px)">Request a demo</button>
+      </div>
+
+      <button data-action="toggle-mobile" class="dim-show-md" style="display:none;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #E8E0D2;border-radius:10px;background:#FAF6F0">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="width:18px;height:1.5px;background:#1F1814"></div>
+          <div style="width:18px;height:1.5px;background:#1F1814"></div>
+          <div style="width:14px;height:1.5px;background:#1F1814"></div>
+        </div>
+      </button>
+    </div>
+
+    <div class="sc-if" data-if="mobileNav" data-default="false">
+      <div class="dim-pop" style="border-top:1px solid #E8E0D2;background:#FAF6F0;padding:16px 24px 24px">
+        <div style="display:flex;flex-direction:column;gap:4px;font:500 16px/1 'Instrument Sans',sans-serif">
+          <button data-nav="home" data-i18n="nav.home" style="text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA">Home</button>
+          <button data-nav="features" data-i18n="nav.features" style="text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA">Features</button>
+          <button data-nav="pricing" data-i18n="nav.pricing" style="text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA">Pricing</button>
+          <button data-nav="cases" data-i18n="nav.cases" style="text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA">Case studies</button>
+          <button data-nav="about" data-i18n="nav.about" style="text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA">About</button>
+          <button data-nav="contact" data-i18n="nav.contact" style="text-align:left;padding:14px 6px">Contact</button>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
+          <button data-lang="en" data-lang-pill="en" style="display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif">
+            <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/gb.png" style="display:block;border-radius:2px">EN
+          </button>
+          <button data-lang="es" data-lang-pill="es" style="display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif">
+            <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/es.png" style="display:block;border-radius:2px">ES
+          </button>
+          <button data-lang="de" data-lang-pill="de" style="display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif">
+            <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/de.png" style="display:block;border-radius:2px">DE
+          </button>
+          <button data-lang="fr" data-lang-pill="fr" style="display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif">
+            <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/fr.png" style="display:block;border-radius:2px">FR
+          </button>
+          <button data-lang="pt" data-lang-pill="pt" style="display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif">
+            <img alt="" width="16" height="12" src="https://flagcdn.com/16x12/pt.png" style="display:block;border-radius:2px">PT
+          </button>
+        </div>
+        <button data-nav="contact" data-i18n="nav.demo" style="margin-top:16px;width:100%;font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:14px 18px;border-radius:999px">Request a demo</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================================================================ -->
+  <!-- HOME                                                              -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isHome" data-default="true">
+  <main class="dim-page">
+
+    <!-- HERO -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:48px 40px 32px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center">
+        <div>
+          <div data-i18n="home.hero.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:24px">For restaurants, pubs &amp; cafés</div>
+          <h1 class="dim-h1" data-i18n-html="home.hero.title1" style="font:400 60px/1.02 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;margin:0 0 6px">A menu worth <em class="dim-h1-accent" style="font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px">showing off</em>,</h1>
+          <h1 class="dim-h1" data-i18n="home.hero.title2" style="font:400 60px/1.02 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;margin:0 0 22px">built and set up for you.</h1>
+          <p data-i18n="home.hero.body" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;max-width:480px;margin:0 0 32px">We build your digital menu, style it to your brand, link it into your existing website, and train your team. You change a dish in two taps.</p>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+            <button data-nav="contact" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#1F1814;padding:16px 24px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;transition:transform .15s,background .15s" data-hover="background:#2D2520;transform:translateY(-1px)"><span data-i18n="common.demo">Request a demo</span> <span style="font-family:'Instrument Serif',serif;font-style:italic">→</span></button>
+            <button data-action="toggle-wa" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:15px 22px;border:1px solid #1F1814;border-radius:999px;background:transparent;display:inline-flex;align-items:center;gap:10px;transition:background .15s,color .15s" data-hover="background:#1F1814;color:#FAF6F0">
+              <span style="width:14px;height:14px;border-radius:50%;background:#25D366;display:inline-block"></span>
+              <span data-i18n="common.chat_wa">Chat on WhatsApp</span>
+            </button>
+          </div>
+          <div style="margin-top:36px;display:flex;align-items:center;gap:14px">
+            <div style="display:flex">
+              <div style="width:32px;height:32px;border-radius:50%;background:#D69B7F;border:2px solid #FAF6F0;margin-left:-8px"></div>
+              <div style="width:32px;height:32px;border-radius:50%;background:#5C6B4E;border:2px solid #FAF6F0;margin-left:-8px"></div>
+              <div style="width:32px;height:32px;border-radius:50%;background:#B8523A;border:2px solid #FAF6F0;margin-left:-8px"></div>
+              <div style="width:32px;height:32px;border-radius:50%;background:#4A4036;border:2px solid #FAF6F0;margin-left:-8px"></div>
+            </div>
+            <div data-i18n-html="home.hero.avatars" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#4A4036">Loved by independent venues<br>across the country</div>
+          </div>
+        </div>
+
+        <!-- Hero visual -->
+        <div class="dim-hero-visual" style="position:relative;height:600px">
+          <div style="position:absolute;inset:0;background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px;box-shadow:0 30px 60px -28px rgba(31,24,20,.22)">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px">
+              <div>
+                <div data-i18n="home.viz.dash_label" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8A7E70">Dashboard · live</div>
+                <div data-i18n="home.viz.dash_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;margin-top:6px;letter-spacing:-.01em">This week's favourites</div>
+              </div>
+              <div data-i18n="home.viz.days" style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70">Mon — Sun</div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div>
+                <div style="display:flex;justify-content:space-between;font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">
+                  <span>Beef &amp; Guinness pie</span>
+                  <span style="font-family:'Instrument Serif',serif;font-style:italic;color:#4A4036">412 views</span>
+                </div>
+                <div style="height:10px;background:#F1E8DA;border-radius:5px;overflow:hidden"><div style="width:92%;height:100%;background:#B8523A"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">
+                  <span>Smoked haddock chowder</span>
+                  <span style="font-family:'Instrument Serif',serif;font-style:italic;color:#4A4036">338 views</span>
+                </div>
+                <div style="height:10px;background:#F1E8DA;border-radius:5px;overflow:hidden"><div style="width:74%;height:100%;background:#B8523A"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">
+                  <span>House burger</span>
+                  <span style="font-family:'Instrument Serif',serif;font-style:italic;color:#4A4036">295 views</span>
+                </div>
+                <div style="height:10px;background:#F1E8DA;border-radius:5px;overflow:hidden"><div style="width:64%;height:100%;background:#D69B7F"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">
+                  <span>Crab linguine</span>
+                  <span style="font-family:'Instrument Serif',serif;font-style:italic;color:#4A4036">221 views</span>
+                </div>
+                <div style="height:10px;background:#F1E8DA;border-radius:5px;overflow:hidden"><div style="width:48%;height:100%;background:#D69B7F"></div></div>
+              </div>
+            </div>
+
+            <div style="margin-top:24px;padding-top:18px;border-top:1px dashed #E8E0D2;display:grid;grid-template-columns:1fr 1fr;gap:18px">
+              <div>
+                <div data-i18n="home.viz.menu_views" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:7px">Menu views</div>
+                <div style="font:500 26px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em">2,184 <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:16px;color:#5C6B4E">+18%</span></div>
+              </div>
+              <div>
+                <div data-i18n="home.viz.updates" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:7px">Updates this week</div>
+                <div style="font:500 26px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em">7</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone overlapping -->
+          <div style="position:absolute;left:-40px;bottom:-40px;width:230px;height:480px;background:#1F1814;border-radius:36px;padding:8px;box-shadow:0 30px 60px -24px rgba(31,24,20,.45)">
+            <div style="position:relative;width:100%;height:100%;background:#FAF6F0;border-radius:30px;overflow:hidden">
+              <div style="position:absolute;top:8px;left:50%;transform:translateX(-50%);width:80px;height:18px;background:#1F1814;border-radius:10px;z-index:2"></div>
+              <div style="padding:36px 18px 16px">
+                <div style="font:400 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase;margin-bottom:6px">The Crowing Cock</div>
+                <div style="font:400 26px/1.05 'Instrument Serif',serif;font-style:italic;color:#1F1814;margin-bottom:18px">Dinner</div>
+
+                <div style="padding-bottom:14px;border-bottom:1px solid #E8E0D2">
+                  <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Beef &amp; Guinness pie</div>
+                  <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Slow-braised, champ mash</div>
+                  <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€18.50</div>
+                </div>
+                <div style="padding:14px 0;border-bottom:1px solid #E8E0D2">
+                  <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Smoked haddock chowder</div>
+                  <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Leek, sweetcorn, soda bread</div>
+                  <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€11.00</div>
+                </div>
+                <div style="padding:14px 0">
+                  <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">House burger</div>
+                  <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Smoked cheddar, brioche</div>
+                  <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€19.50</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGO STRIP -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 16px">
+      <div data-i18n="home.logos.label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;color:#8A7E70;text-transform:uppercase;margin-bottom:20px;text-align:center">Trusted by independent venues</div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center;opacity:.85">
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+        <div data-i18n="home.logos.placeholder" style="height:38px;width:130px;border:1px dashed #E8E0D2;border-radius:8px;display:flex;align-items:center;justify-content:center;font:500 10px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.1em;text-transform:uppercase">venue logo</div>
+      </div>
+    </section>
+
+    <!-- FEATURES SUMMARY -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:80px 40px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:40px">
+        <div style="max-width:540px">
+          <div data-i18n="home.feat.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:14px">What you get</div>
+          <h2 class="dim-h2" data-i18n-html="home.feat.title" style="font:400 40px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;text-wrap:balance;margin:0">Software that feels like <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">your venue</em>, not a generic template.</h2>
+        </div>
+        <button data-nav="features" data-i18n="home.feat.see_all" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:12px 0;border-bottom:1px solid #1F1814" data-hover="color:#B8523A;border-bottom-color:#B8523A">See all features →</button>
+      </div>
+
+      <div class="dim-stack-md" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="width:42px;height:42px;border-radius:10px;background:#F1E8DA;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+            <div style="width:18px;height:22px;border:1.5px solid #B8523A;border-radius:3px;position:relative">
+              <div style="position:absolute;top:3px;left:2px;right:2px;height:1.5px;background:#B8523A"></div>
+              <div style="position:absolute;top:7px;left:2px;right:6px;height:1.5px;background:#B8523A"></div>
+              <div style="position:absolute;top:11px;left:2px;right:4px;height:1.5px;background:#B8523A"></div>
+            </div>
+          </div>
+          <h3 data-i18n="home.feat.c1_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 8px">A digital menu, properly designed</h3>
+          <p data-i18n="home.feat.c1_body" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0">Photos, descriptions, allergens, prices — all laid out so diners actually read them.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="width:42px;height:42px;border-radius:10px;background:#F1E8DA;display:flex;align-items:center;justify-content:center;margin-bottom:20px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;width:20px;height:20px">
+              <div style="background:#B8523A;border-radius:2px"></div>
+              <div style="background:#B8523A;border-radius:2px;opacity:.4"></div>
+              <div style="background:#B8523A;border-radius:2px;opacity:.4"></div>
+              <div style="background:#B8523A;border-radius:2px"></div>
+            </div>
+          </div>
+          <h3 data-i18n="home.feat.c2_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 8px">A dashboard you can run from the bar</h3>
+          <p data-i18n="home.feat.c2_body" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0">Edit a dish, swap a photo, mark something sold out — from any phone or laptop, in seconds.</p>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="width:42px;height:42px;border-radius:10px;background:#F1E8DA;display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;gap:2px;margin-bottom:20px">
+            <div style="width:3px;height:7px;background:#B8523A;border-radius:1px"></div>
+            <div style="width:3px;height:12px;background:#B8523A;border-radius:1px"></div>
+            <div style="width:3px;height:10px;background:#B8523A;border-radius:1px"></div>
+            <div style="width:3px;height:16px;background:#B8523A;border-radius:1px"></div>
+            <div style="width:3px;height:13px;background:#B8523A;border-radius:1px"></div>
+          </div>
+          <h3 data-i18n="home.feat.c3_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 8px">See what diners actually want</h3>
+          <p data-i18n="home.feat.c3_body" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0">Dish popularity, views, and trends — so your next menu is based on data, not guesswork.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS — dark panel -->
+    <section style="background:#1F1814;color:#FAF6F0;margin-top:24px">
+      <div class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:88px 40px">
+        <div data-i18n="home.how.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#D69B7F;margin-bottom:18px">How it works</div>
+        <h2 class="dim-h2" data-i18n-html="home.how.title" style="font:400 44px/1.1 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.03em;margin:0 0 56px;max-width:680px;text-wrap:balance">We do the heavy lifting. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F">You run the show.</em></h2>
+
+        <div class="dim-stack4-md" style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+          <div>
+            <div style="font:400 38px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">01.</div>
+            <div data-i18n="home.how.s1_title" style="font:600 17px/1.2 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:10px">Send your menu</div>
+            <div data-i18n="home.how.s1_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">PDF, a phone photo of the chalkboard, a Word doc — whatever you've got. We take it from there.</div>
+          </div>
+          <div>
+            <div style="font:400 38px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">02.</div>
+            <div data-i18n="home.how.s2_title" style="font:600 17px/1.2 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:10px">We build &amp; style it</div>
+            <div data-i18n="home.how.s2_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Matched to your brand, your tone, your venue. Photos, allergens, sections — properly laid out.</div>
+          </div>
+          <div>
+            <div style="font:400 38px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">03.</div>
+            <div data-i18n="home.how.s3_title" style="font:600 17px/1.2 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:10px">Link &amp; train</div>
+            <div data-i18n="home.how.s3_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Plugged into your existing website. A 30-minute training call with your team. That's the handover.</div>
+          </div>
+          <div>
+            <div style="font:400 38px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">04.</div>
+            <div data-i18n="home.how.s4_title" style="font:600 17px/1.2 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:10px">You run it</div>
+            <div data-i18n="home.how.s4_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Edit a dish in 10 seconds. See what's selling. We're still there when you need us.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:64px;display:flex;align-items:center;gap:16px;padding-top:32px;border-top:1px solid #3A2F26">
+          <div data-i18n="home.how.quote" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:#FAF6F0;flex:1;max-width:680px;line-height:1.4">"Most people go live in 5–7 days from sending us their menu. The training call is the longest meeting we ask of you."</div>
+          <button data-nav="features" data-i18n="home.how.more" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;padding:14px 22px;border:1px solid #FAF6F0;border-radius:999px;background:transparent;flex:none" data-hover="background:#FAF6F0;color:#1F1814">More on the setup →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIATOR -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:88px 40px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center">
+        <div>
+          <div data-i18n="home.diff.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#5C6B4E;margin-bottom:18px">The difference</div>
+          <h2 class="dim-h2" data-i18n-html="home.diff.title" style="font:400 42px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 22px;text-wrap:balance">This isn't <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">another tool</em> to learn. It's a service.</h2>
+          <p data-i18n="home.diff.body" style="font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 28px">Most digital menu products hand you a builder, a help centre, and a free trial. We don't. We build the thing for you, plug it into your site, and sit down with your team to walk them through it.</p>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div style="width:22px;height:22px;border-radius:50%;background:#B8523A;color:#FAF6F0;display:flex;align-items:center;justify-content:center;font:600 12px/1 'Instrument Sans',sans-serif;flex:none;margin-top:1px">✓</div>
+              <div data-i18n="home.diff.p1" style="font:500 15px/1.5 'Instrument Sans',sans-serif;color:#1F1814">We build your menu from whatever you have — PDF, photo, doc.</div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div style="width:22px;height:22px;border-radius:50%;background:#B8523A;color:#FAF6F0;display:flex;align-items:center;justify-content:center;font:600 12px/1 'Instrument Sans',sans-serif;flex:none;margin-top:1px">✓</div>
+              <div data-i18n="home.diff.p2" style="font:500 15px/1.5 'Instrument Sans',sans-serif;color:#1F1814">We style it to match your brand and venue.</div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div style="width:22px;height:22px;border-radius:50%;background:#B8523A;color:#FAF6F0;display:flex;align-items:center;justify-content:center;font:600 12px/1 'Instrument Sans',sans-serif;flex:none;margin-top:1px">✓</div>
+              <div data-i18n="home.diff.p3" style="font:500 15px/1.5 'Instrument Sans',sans-serif;color:#1F1814">We link it into your existing website ourselves.</div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <div style="width:22px;height:22px;border-radius:50%;background:#B8523A;color:#FAF6F0;display:flex;align-items:center;justify-content:center;font:600 12px/1 'Instrument Sans',sans-serif;flex:none;margin-top:1px">✓</div>
+              <div data-i18n="home.diff.p4" style="font:500 15px/1.5 'Instrument Sans',sans-serif;color:#1F1814">We train your team in a single 30-minute session.</div>
+            </div>
+          </div>
+        </div>
+        <div style="position:relative">
+          <!-- product shot placeholder card -->
+          <div style="background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:14px;box-shadow:0 30px 60px -28px rgba(31,24,20,.2)">
+            <div style="aspect-ratio:4/3;border-radius:12px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
+              <div data-i18n="home.diff.card_badge" style="position:absolute;top:14px;left:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">product shot</div>
+              <div data-i18n="home.diff.card_pill" style="background:#1F1814;color:#FAF6F0;padding:10px 16px;border-radius:999px;font:500 12px/1 'Instrument Sans',sans-serif">Onboarding session — visual</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 6px 4px">
+              <div>
+                <div data-i18n="home.diff.card_title" style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Setup, sorted</div>
+                <div data-i18n="home.diff.card_body" style="font:400 12px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">From signed contract to live menu in days, not weeks.</div>
+              </div>
+              <div style="font-family:'Instrument Serif',serif;font-style:italic;font-size:18px;color:#5C6B4E">5–7 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:32px 40px 88px">
+      <div class="dim-stack-md" style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px">
+        <div style="background:#F1E8DA;border-radius:20px;padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between;min-height:340px">
+          <div>
+            <div style="font:400 36px/1 'Instrument Serif',serif;font-style:italic;color:#B8523A;margin-bottom:18px">"</div>
+            <div data-i18n="home.proof.quote" style="font:400 26px/1.35 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;text-wrap:balance">Placeholder testimonial — the kind of quote that says "we don't have to think about the menu anymore." Real client quote goes here.</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:32px">
+            <div style="width:44px;height:44px;border-radius:50%;background:#D69B7F;border:2px solid #FAF6F0"></div>
+            <div>
+              <div data-i18n="home.proof.client" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814">Client name</div>
+              <div data-i18n="home.proof.role" style="font:400 12px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">Role · Venue name</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:20px">
+          <div style="background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:28px">
+            <div data-i18n="home.proof.stat1_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:12px">Average go-live</div>
+            <div style="font:400 44px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em">5–7 <span data-i18n="home.proof.stat1_unit" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:#5C6B4E">days</span></div>
+          </div>
+          <div style="background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:28px">
+            <div data-i18n="home.proof.stat2_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:12px">Time to edit a dish</div>
+            <div style="font:400 44px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em">~10 <span data-i18n="home.proof.stat2_unit" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;color:#5C6B4E">seconds</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TEASER -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:0 40px 88px">
+      <div style="background:#1F1814;color:#FAF6F0;border-radius:22px;padding:56px 48px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap">
+        <div style="max-width:520px">
+          <div data-i18n="home.price.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#D69B7F;margin-bottom:16px">Pricing, plainly</div>
+          <h2 class="dim-h2" data-i18n="home.price.title" style="font:400 36px/1.1 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance">A one-time setup fee, then a flat monthly subscription.</h2>
+          <p data-i18n="home.price.body" style="font:400 15px/1.6 'Instrument Sans',sans-serif;color:#B8A89A;margin:0">Hosting, support, and updates included. No per-cover charges, no per-dish charges, no surprise invoices.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <button data-nav="pricing" data-i18n="home.price.see_full" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#1F1814;background:#FAF6F0;padding:16px 24px;border-radius:999px;transition:transform .15s" data-hover="transform:translateY(-1px);background:#F1E8DA">See full pricing →</button>
+          <button data-nav="contact" data-i18n="home.price.quote_cta" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;padding:14px 22px;border:1px solid #D69B7F;border-radius:999px" data-hover="background:#3A2F26">Get a tailored quote</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:0 40px 120px;text-align:center">
+      <div data-i18n="home.cta.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">Ready when you are</div>
+      <h2 class="dim-h2" data-i18n-html="home.cta.title" style="font:400 52px/1.05 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;margin:0 0 28px;text-wrap:balance;max-width:760px;margin-left:auto;margin-right:auto">Let's get your menu <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">live</em>.</h2>
+      <p data-i18n="home.cta.body" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0 auto 32px;max-width:560px">A 20-minute demo. We'll show you the dashboard, walk through real venue setups, and answer everything. No commitment.</p>
+      <div style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
+        <button data-nav="contact" data-i18n="common.demo_arrow" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#1F1814;padding:16px 26px;border-radius:999px;transition:transform .15s,background .15s" data-hover="background:#2D2520;transform:translateY(-1px)">Request a demo →</button>
+        <button data-action="toggle-wa" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:15px 22px;border:1px solid #1F1814;border-radius:999px;background:transparent;display:inline-flex;align-items:center;gap:10px;transition:background .15s,color .15s" data-hover="background:#1F1814;color:#FAF6F0">
+          <span style="width:14px;height:14px;border-radius:50%;background:#25D366;display:inline-block"></span>
+          <span data-i18n="common.chat_wa">Chat on WhatsApp</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- FEATURES                                                          -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isFeatures" data-default="false">
+  <main class="dim-page">
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px">
+      <div data-i18n="features.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">Features</div>
+      <h1 class="dim-h1" data-i18n-html="features.title" style="font:400 64px/1.04 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;max-width:880px;margin:0 0 22px">Everything you need to run your menu. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">Nothing you don't.</em></h1>
+      <p data-i18n="features.intro" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;max-width:640px;margin:0">Four parts to Dimonova: the digital menu your diners see, the dashboard your team runs it from, the analytics that tell you what's working, and the done-for-you onboarding that gets all of it live.</p>
+    </section>
+
+    <!-- Feature 1: Digital menu -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:56px 40px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+        <div>
+          <div data-i18n="features.f1.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:16px">01 · The digital menu</div>
+          <h2 class="dim-h2" data-i18n="features.f1.title" style="font:400 38px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance">A menu that looks like your venue, not a takeaway app.</h2>
+          <p data-i18n="features.f1.body" style="font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 24px">Photos, descriptions, allergens, prices, sections, daily specials — properly typeset. Loads fast on a phone. Lives inside your existing website, so diners never feel handed off to a third-party tool.</p>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f1.p1" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Embedded, not redirected.</strong> Lives at <span style="font-family:'Instrument Serif',serif;font-style:italic">yourvenue.com/menu</span>, not a generic URL.</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f1.p2" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Allergens &amp; dietary tags</strong> on every dish, filterable for diners.</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f1.p3" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Optional QR codes</strong> — table cards, posters, business cards — point straight to it.</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f1.p4" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Sold-out states</strong> flip a dish off instantly during service.</div></div>
+          </div>
+        </div>
+
+        <!-- Phone visual -->
+        <div style="display:flex;justify-content:center">
+          <div style="width:280px;height:580px;background:#1F1814;border-radius:42px;padding:9px;box-shadow:0 40px 80px -32px rgba(31,24,20,.4)">
+            <div style="position:relative;width:100%;height:100%;background:#FAF6F0;border-radius:34px;overflow:hidden">
+              <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:90px;height:22px;background:#1F1814;border-radius:12px;z-index:2"></div>
+              <div style="padding:42px 22px 16px">
+                <div style="font:400 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase;margin-bottom:6px">The Crowing Cock · Galway</div>
+                <div style="font:400 30px/1.05 'Instrument Serif',serif;font-style:italic;color:#1F1814;margin-bottom:18px">Dinner menu</div>
+                <div style="display:flex;gap:6px;margin-bottom:20px;overflow:hidden">
+                  <div style="padding:6px 12px;border-radius:999px;background:#1F1814;color:#FAF6F0;font:500 11px/1 'Instrument Sans',sans-serif;flex:none">All</div>
+                  <div style="padding:6px 12px;border-radius:999px;background:#F1E8DA;color:#4A4036;font:500 11px/1 'Instrument Sans',sans-serif;flex:none">Starters</div>
+                  <div style="padding:6px 12px;border-radius:999px;background:#F1E8DA;color:#4A4036;font:500 11px/1 'Instrument Sans',sans-serif;flex:none">Mains</div>
+                </div>
+
+                <div style="display:flex;gap:12px;padding-bottom:16px;border-bottom:1px solid #E8E0D2">
+                  <div style="flex:1">
+                    <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Beef &amp; Guinness pie</div>
+                    <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Slow-braised, buttery puff, champ mash</div>
+                    <div style="display:flex;gap:6px;margin-top:8px">
+                      <div style="padding:2px 6px;background:#F1E8DA;border-radius:4px;font:500 9px/1 'Instrument Sans',sans-serif;color:#4A4036">Gluten</div>
+                      <div style="padding:2px 6px;background:#F1E8DA;border-radius:4px;font:500 9px/1 'Instrument Sans',sans-serif;color:#4A4036">Dairy</div>
+                    </div>
+                    <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€18.50</div>
+                  </div>
+                  <div style="width:64px;height:64px;border-radius:10px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 4px,#EAE0CC 4px,#EAE0CC 8px);flex:none"></div>
+                </div>
+
+                <div style="display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #E8E0D2">
+                  <div style="flex:1">
+                    <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Smoked haddock chowder</div>
+                    <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Leek, sweetcorn, brown soda bread</div>
+                    <div style="display:flex;gap:6px;margin-top:8px">
+                      <div style="padding:2px 6px;background:#F1E8DA;border-radius:4px;font:500 9px/1 'Instrument Sans',sans-serif;color:#4A4036">Fish</div>
+                      <div style="padding:2px 6px;background:#F1E8DA;border-radius:4px;font:500 9px/1 'Instrument Sans',sans-serif;color:#4A4036">Gluten</div>
+                    </div>
+                    <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€11.00</div>
+                  </div>
+                  <div style="width:64px;height:64px;border-radius:10px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 4px,#EAE0CC 4px,#EAE0CC 8px);flex:none"></div>
+                </div>
+
+                <div style="display:flex;gap:12px;padding:16px 0;opacity:.55">
+                  <div style="flex:1">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <div style="font:500 14px/1.2 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:line-through">Crab linguine</div>
+                      <div style="padding:2px 6px;background:#1F1814;color:#FAF6F0;border-radius:4px;font:500 9px/1 'Instrument Sans',sans-serif">Sold out</div>
+                    </div>
+                    <div style="font:400 11px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Chilli, parsley, garlic crumb</div>
+                    <div style="font:500 13px/1 'Instrument Sans',sans-serif;color:#B8523A;margin-top:8px">€22.00</div>
+                  </div>
+                  <div style="width:64px;height:64px;border-radius:10px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 4px,#EAE0CC 4px,#EAE0CC 8px);flex:none"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 2: Dashboard -->
+    <section style="background:#F1E8DA;margin-top:32px">
+      <div class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:88px 40px">
+        <div class="dim-hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+          <!-- Dashboard mock -->
+          <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(31,24,20,.2)">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #F1E8DA;background:#FAF6F0">
+              <div style="display:flex;gap:6px">
+                <div style="width:10px;height:10px;border-radius:50%;background:#E8E0D2"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:#E8E0D2"></div>
+                <div style="width:10px;height:10px;border-radius:50%;background:#E8E0D2"></div>
+              </div>
+              <div style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70">dashboard.dimonova.com</div>
+              <div style="width:40px"></div>
+            </div>
+            <div style="display:grid;grid-template-columns:160px 1fr;min-height:380px">
+              <div style="background:#FAF6F0;border-right:1px solid #F1E8DA;padding:18px 14px">
+                <div data-i18n="features.f2.viz_menu" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:10px">Menu</div>
+                <div style="display:flex;flex-direction:column;gap:4px">
+                  <div data-i18n="features.f2.viz_all" style="padding:8px 10px;background:#1F1814;color:#FAF6F0;border-radius:6px;font:500 12px/1 'Instrument Sans',sans-serif">All dishes</div>
+                  <div data-i18n="features.f2.viz_starters" style="padding:8px 10px;color:#4A4036;font:500 12px/1 'Instrument Sans',sans-serif">Starters</div>
+                  <div data-i18n="features.f2.viz_mains" style="padding:8px 10px;color:#4A4036;font:500 12px/1 'Instrument Sans',sans-serif">Mains</div>
+                  <div data-i18n="features.f2.viz_desserts" style="padding:8px 10px;color:#4A4036;font:500 12px/1 'Instrument Sans',sans-serif">Desserts</div>
+                  <div data-i18n="features.f2.viz_drinks" style="padding:8px 10px;color:#4A4036;font:500 12px/1 'Instrument Sans',sans-serif">Drinks</div>
+                </div>
+                <div data-i18n="features.f2.viz_insights" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin:18px 0 10px">Insights</div>
+                <div data-i18n="features.f2.viz_popularity" style="padding:8px 10px;color:#4A4036;font:500 12px/1 'Instrument Sans',sans-serif">Popularity</div>
+              </div>
+              <div style="padding:18px">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+                  <div style="font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em"><span data-i18n="features.f2.viz_all">All dishes</span> <span style="color:#8A7E70;font-weight:400">· 42</span></div>
+                  <div data-i18n="features.f2.viz_newdish" style="font:500 11px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:8px 12px;border-radius:6px">+ New dish</div>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #F1E8DA;border-radius:8px">
+                    <div style="width:36px;height:36px;border-radius:6px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 3px,#EAE0CC 3px,#EAE0CC 6px);flex:none"></div>
+                    <div style="flex:1">
+                      <div style="font:500 12px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Beef &amp; Guinness pie</div>
+                      <div style="font:400 10px/1.3 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">Mains · Gluten, Dairy</div>
+                    </div>
+                    <div style="font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814">€18.50</div>
+                    <div style="width:36px;height:18px;background:#5C6B4E;border-radius:9px;position:relative;flex:none">
+                      <div style="position:absolute;right:2px;top:2px;width:14px;height:14px;background:#FAF6F0;border-radius:50%"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #F1E8DA;border-radius:8px">
+                    <div style="width:36px;height:36px;border-radius:6px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 3px,#EAE0CC 3px,#EAE0CC 6px);flex:none"></div>
+                    <div style="flex:1">
+                      <div style="font:500 12px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Smoked haddock chowder</div>
+                      <div style="font:400 10px/1.3 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">Starters · Fish, Gluten</div>
+                    </div>
+                    <div style="font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814">€11.00</div>
+                    <div style="width:36px;height:18px;background:#5C6B4E;border-radius:9px;position:relative;flex:none">
+                      <div style="position:absolute;right:2px;top:2px;width:14px;height:14px;background:#FAF6F0;border-radius:50%"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #F1E8DA;border-radius:8px;background:#FAF6F0">
+                    <div style="width:36px;height:36px;border-radius:6px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 3px,#EAE0CC 3px,#EAE0CC 6px);flex:none;opacity:.6"></div>
+                    <div style="flex:1">
+                      <div style="display:flex;gap:6px;align-items:center">
+                        <div style="font:500 12px/1.2 'Instrument Sans',sans-serif;color:#1F1814">Crab linguine</div>
+                        <div data-i18n="features.f2.viz_soldout" style="padding:2px 5px;background:#1F1814;color:#FAF6F0;border-radius:3px;font:500 8px/1 'Instrument Sans',sans-serif">Sold out</div>
+                      </div>
+                      <div style="font:400 10px/1.3 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">Mains · Shellfish</div>
+                    </div>
+                    <div style="font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814">€22.00</div>
+                    <div style="width:36px;height:18px;background:#E8E0D2;border-radius:9px;position:relative;flex:none">
+                      <div style="position:absolute;left:2px;top:2px;width:14px;height:14px;background:#FAF6F0;border-radius:50%"></div>
+                    </div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:12px;padding:10px;border:1px solid #F1E8DA;border-radius:8px">
+                    <div style="width:36px;height:36px;border-radius:6px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 3px,#EAE0CC 3px,#EAE0CC 6px);flex:none"></div>
+                    <div style="flex:1">
+                      <div style="font:500 12px/1.2 'Instrument Sans',sans-serif;color:#1F1814">House burger</div>
+                      <div style="font:400 10px/1.3 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:2px">Mains · Gluten, Dairy</div>
+                    </div>
+                    <div style="font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814">€19.50</div>
+                    <div style="width:36px;height:18px;background:#5C6B4E;border-radius:9px;position:relative;flex:none">
+                      <div style="position:absolute;right:2px;top:2px;width:14px;height:14px;background:#FAF6F0;border-radius:50%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div data-i18n="features.f2.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:16px">02 · The dashboard</div>
+            <h2 class="dim-h2" data-i18n="features.f2.title" style="font:400 38px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance">If you can use Instagram, you can use this.</h2>
+            <p data-i18n="features.f2.body" style="font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 24px">No menu engineer training, no agency tickets, no "raise a support request to change a price." Whoever's running the floor can flip a dish off, raise a price, or swap a photo from their phone in under a minute.</p>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f2.p1" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Drag &amp; drop</strong> dishes between sections.</div></div>
+              <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f2.p2" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Multiple users</strong> — owner, chef, floor manager.</div></div>
+              <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f2.p3" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Schedule changes</strong> — flip on the brunch menu Saturday at 9am, off at 2pm.</div></div>
+              <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f2.p4" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Works on any device.</strong> Bartender's phone, manager's iPad, owner's laptop.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 3: Analytics -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:88px 40px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+        <div>
+          <div data-i18n="features.f3.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:16px">03 · Analytics</div>
+          <h2 class="dim-h2" data-i18n="features.f3.title" style="font:400 38px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 18px;text-wrap:balance">The menu is finally giving you data, not guesses.</h2>
+          <p data-i18n="features.f3.body" style="font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 24px">Every dish view is logged. You see what diners look at, what they skip, and what's losing them at the description. Run a brunch special; see if anyone read it. Your next menu refresh is decisions, not opinions.</p>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f3.p1" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Dish popularity</strong> by week, month, and section.</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f3.p2" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">View &amp; dwell time</strong> — was the dish noticed, or skipped?</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f3.p3" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Trend lines</strong> across menu changes, so you can see what worked.</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:6px;height:6px;border-radius:50%;background:#B8523A;margin-top:9px;flex:none"></div><div data-i18n-html="features.f3.p4" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#1F1814"><strong style="font-weight:600">Weekly digest email</strong> — top 5, bottom 5, what changed.</div></div>
+          </div>
+        </div>
+
+        <!-- Analytics visual -->
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px;box-shadow:0 30px 60px -28px rgba(31,24,20,.18)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px">
+            <div data-i18n="features.f3.viz_title" style="font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em">Views — last 12 weeks</div>
+            <div style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70">Mar — Jun</div>
+          </div>
+
+          <!-- bar chart -->
+          <div style="display:flex;align-items:flex-end;gap:6px;height:160px;margin-bottom:20px">
+            <div style="flex:1;height:36%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:42%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:38%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:52%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:48%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:60%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:55%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:72%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:68%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:84%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:78%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+            <div style="flex:1;height:96%;background:linear-gradient(180deg,#D69B7F,#B8523A);border-radius:4px 4px 0 0"></div>
+          </div>
+
+          <div style="padding-top:18px;border-top:1px dashed #E8E0D2;display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+            <div>
+              <div data-i18n="features.f3.viz_total" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:6px">Total views</div>
+              <div style="font:500 24px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em">18.4k</div>
+            </div>
+            <div>
+              <div data-i18n="features.f3.viz_top" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:6px">Top section</div>
+              <div data-i18n="features.f3.viz_top_value" style="font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814">Mains</div>
+            </div>
+            <div>
+              <div data-i18n="features.f3.viz_trend" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:6px">Trend</div>
+              <div style="font:500 16px/1 'Instrument Sans',sans-serif;color:#5C6B4E">↑ 24%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature 4: Done-for-you onboarding — the star -->
+    <section style="background:#1F1814;color:#FAF6F0">
+      <div class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:104px 40px">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:56px">
+          <div style="max-width:720px">
+            <div data-i18n="features.f4.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#D69B7F;margin-bottom:18px">04 · Done-for-you onboarding</div>
+            <h2 class="dim-h2" data-i18n-html="features.f4.title" style="font:400 52px/1.05 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.03em;margin:0;text-wrap:balance">The part nobody else does. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F">We do it for you.</em></h2>
+          </div>
+        </div>
+
+        <div class="dim-stack4-md" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:64px">
+          <div style="background:#2A2118;border:1px solid #3A2F26;border-radius:14px;padding:24px;min-height:200px">
+            <div style="font:400 32px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">i.</div>
+            <div data-i18n="features.f4.c1_title" style="font:600 16px/1.25 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:8px">Menu build</div>
+            <div data-i18n="features.f4.c1_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Send us your menu in whatever format you have. We type it up, structure it, organise it into sections, add allergens, and check every dish with you before going live.</div>
+          </div>
+          <div style="background:#2A2118;border:1px solid #3A2F26;border-radius:14px;padding:24px;min-height:200px">
+            <div style="font:400 32px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">ii.</div>
+            <div data-i18n="features.f4.c2_title" style="font:600 16px/1.25 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:8px">Brand styling</div>
+            <div data-i18n="features.f4.c2_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Colours, fonts, photography style — matched to your venue. The menu should feel like it belongs to your brand, not ours. We'll take cues from your existing site and signage.</div>
+          </div>
+          <div style="background:#2A2118;border:1px solid #3A2F26;border-radius:14px;padding:24px;min-height:200px">
+            <div style="font:400 32px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">iii.</div>
+            <div data-i18n="features.f4.c3_title" style="font:600 16px/1.25 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:8px">Website linking</div>
+            <div data-i18n="features.f4.c3_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">Embedded directly into your existing website by us. Squarespace, Wix, WordPress, custom build — we handle it. Your menu lives at yourvenue.com/menu, not on someone else's domain.</div>
+          </div>
+          <div style="background:#2A2118;border:1px solid #3A2F26;border-radius:14px;padding:24px;min-height:200px">
+            <div style="font:400 32px/1 'Instrument Serif',serif;font-style:italic;color:#D69B7F;margin-bottom:14px">iv.</div>
+            <div data-i18n="features.f4.c4_title" style="font:600 16px/1.25 'Instrument Sans',sans-serif;color:#FAF6F0;margin-bottom:8px">Team training</div>
+            <div data-i18n="features.f4.c4_body" style="font:400 13px/1.6 'Instrument Sans',sans-serif;color:#B8A89A">A single 30-minute session with whoever will run the dashboard — usually the owner and the floor manager. We screen-share, you take notes. After that, you're independent.</div>
+          </div>
+        </div>
+
+        <div style="padding:28px 32px;background:#2A2118;border-left:3px solid #B8523A;border-radius:0 12px 12px 0">
+          <div data-i18n="features.f4.quote" style="font:400 22px/1.4 'Instrument Serif',serif;font-style:italic;color:#FAF6F0;margin-bottom:10px">"You bought software. We're handing you a working menu."</div>
+          <div data-i18n="features.f4.promise" style="font:500 12px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#D69B7F">Our promise · in five to seven days, you're live</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:104px 40px;text-align:center">
+      <h2 class="dim-h2" data-i18n="features.cta.title" style="font:400 44px/1.08 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 24px;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto">See it on your menu, not ours.</h2>
+      <p data-i18n="features.cta.body" style="font:400 16px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 auto 28px;max-width:540px">Book a demo and we'll mock up a section of your real menu — no commitment, no slides.</p>
+      <button data-nav="contact" data-i18n="common.demo_arrow" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:16px 26px;border-radius:999px" data-hover="background:#9B4530">Request a demo →</button>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- PRICING                                                           -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isPricing" data-default="false">
+  <main class="dim-page">
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px;text-align:center">
+      <div data-i18n="pricing.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">Pricing</div>
+      <h1 class="dim-h1" data-i18n-html="pricing.title" style="font:400 60px/1.04 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;margin:0 auto 22px;max-width:780px">Two charges. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">No surprises.</em></h1>
+      <p data-i18n="pricing.intro" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0 auto;max-width:580px">A one-time setup fee covers the build, styling, website linking, and team training. After that, a flat monthly subscription covers hosting, support, and updates.</p>
+    </section>
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:32px 40px 80px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+
+        <!-- Setup card -->
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:24px;padding:40px;min-height:540px;display:flex;flex-direction:column">
+          <div data-i18n="pricing.setup.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:14px">One-time setup</div>
+          <h2 data-i18n="pricing.setup.title" style="font:400 32px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em;margin:0 0 8px">Setup, done for you</h2>
+          <p data-i18n="pricing.setup.body" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 18px">Paid once, at the start. Covers everything from "we have a PDF" to "diners are reading it on their phones."</p>
+
+          <div style="padding:24px 0;border-top:1px solid #F1E8DA;border-bottom:1px solid #F1E8DA;margin-bottom:24px">
+            <div data-i18n="pricing.setup.price" style="font:400 56px/1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em">From €600</div>
+            <div data-i18n="pricing.setup.price_note" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:8px">One-time, billed when you go live. Adjusted for venue size and menu complexity.</div>
+          </div>
+
+          <div data-i18n="pricing.setup.covered" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:14px">What's covered</div>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.setup.i1" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">Menu typed up, structured and organised by us</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.setup.i2" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">Styled to match your existing brand</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.setup.i3" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">Linked into your existing website</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.setup.i4" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">QR codes (table cards, posters) — optional add-on</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.setup.i5" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">Team training session, 30 minutes, video call</div></div>
+          </div>
+        </div>
+
+        <!-- Monthly card -->
+        <div style="background:#1F1814;color:#FAF6F0;border-radius:24px;padding:40px;min-height:540px;display:flex;flex-direction:column;position:relative;overflow:hidden">
+          <div data-i18n="pricing.monthly.badge" style="position:absolute;top:0;right:0;background:#B8523A;color:#FAF6F0;font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:0 0 0 12px">Ongoing</div>
+          <div data-i18n="pricing.monthly.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D69B7F;margin-bottom:14px">Monthly subscription</div>
+          <h2 data-i18n="pricing.monthly.title" style="font:400 32px/1.1 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.02em;margin:0 0 8px">Everything, kept running</h2>
+          <p data-i18n="pricing.monthly.body" style="font:400 14px/1.55 'Instrument Sans',sans-serif;color:#B8A89A;margin:0 0 18px">Paid monthly. Hosting, support, software updates, and our team on hand when you need a hand.</p>
+
+          <div style="padding:24px 0;border-top:1px solid #3A2F26;border-bottom:1px solid #3A2F26;margin-bottom:24px">
+            <div style="font:400 56px/1 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.03em"><span data-i18n="pricing.monthly.price_amt">From €45</span><span data-i18n="pricing.monthly.price_per" style="font-size:22px;color:#8A7E70">/mo</span></div>
+            <div data-i18n="pricing.monthly.price_note" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:8px">Billed monthly. Cancel any time, on a month's notice.</div>
+          </div>
+
+          <div data-i18n="pricing.monthly.included" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:14px">What's included</div>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#3A2F26;color:#D69B7F;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.monthly.i1" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#FAF6F0">Unlimited dishes, sections, and updates</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#3A2F26;color:#D69B7F;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.monthly.i2" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#FAF6F0">Multiple users — owner, chef, floor</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#3A2F26;color:#D69B7F;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.monthly.i3" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#FAF6F0">Dish popularity analytics &amp; weekly digest</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#3A2F26;color:#D69B7F;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.monthly.i4" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#FAF6F0">Hosting, security, software updates</div></div>
+            <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:18px;height:18px;border-radius:50%;background:#3A2F26;color:#D69B7F;display:flex;align-items:center;justify-content:center;font:600 10px/1 'Instrument Sans',sans-serif;flex:none;margin-top:2px">✓</div><div data-i18n="pricing.monthly.i5" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#FAF6F0">Real human support — email &amp; WhatsApp</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA strip -->
+      <div style="margin-top:28px;padding:28px 32px;background:#F1E8DA;border-radius:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div>
+          <div data-i18n="pricing.strip.title" style="font:500 18px/1.3 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em">Final price depends on your menu &amp; venue.</div>
+          <div data-i18n="pricing.strip.body" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A4036;margin-top:4px">A 7-dish café and a 60-dish gastropub aren't the same job. Tell us about your venue and we'll quote on the call.</div>
+        </div>
+        <button data-nav="contact" data-i18n="pricing.strip.cta" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:14px 22px;border-radius:999px" data-hover="background:#9B4530">Get a tailored quote →</button>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="dim-pad-h" style="max-width:840px;margin:0 auto;padding:24px 40px 120px">
+      <h2 class="dim-h2" data-i18n="pricing.faq.title" style="font:400 36px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 32px;text-wrap:balance">Things people ask first</h2>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;padding:24px 28px">
+          <div data-i18n="pricing.faq.q1" style="font:600 16px/1.3 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">Is there a contract?</div>
+          <div data-i18n="pricing.faq.a1" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036">A simple service agreement, cancellable on a month's notice. No multi-year lock-ins.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;padding:24px 28px">
+          <div data-i18n="pricing.faq.q2" style="font:600 16px/1.3 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">What if my menu changes a lot?</div>
+          <div data-i18n="pricing.faq.a2" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036">Edit it yourself, as often as you like. The monthly subscription is flat regardless of how often you change things.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;padding:24px 28px">
+          <div data-i18n="pricing.faq.q3" style="font:600 16px/1.3 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">Do I need a new website?</div>
+          <div data-i18n="pricing.faq.a3" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036">No. Your existing one stays. We embed the menu into it. Squarespace, Wix, WordPress, or a custom build — all fine.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;padding:24px 28px">
+          <div data-i18n="pricing.faq.q4" style="font:600 16px/1.3 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">What about photos of the dishes?</div>
+          <div data-i18n="pricing.faq.a4" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036">You can supply your own, use ours from your existing site, or skip photos entirely. Optional add-on: we arrange a photographer.</div>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:14px;padding:24px 28px">
+          <div data-i18n="pricing.faq.q5" style="font:600 16px/1.3 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">How long until we're live?</div>
+          <div data-i18n="pricing.faq.a5" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036">Five to seven working days from receiving your menu, in most cases. We'll commit to a date on the demo call.</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- CASE STUDIES                                                      -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isCases" data-default="false">
+  <main class="dim-page">
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px">
+      <div data-i18n="cases.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">Case studies</div>
+      <h1 class="dim-h1" data-i18n-html="cases.title" style="font:400 60px/1.04 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;margin:0 0 22px;max-width:880px">Real venues. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">Real menus.</em> Real results.</h1>
+      <p data-i18n="cases.intro" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;max-width:600px;margin:0">Case studies and testimonials are being collected from current clients. Real stories will replace each of the placeholders below as they're approved.</p>
+
+      <div data-i18n-html="cases.note" style="margin-top:24px;padding:14px 18px;background:#F1E8DA;border-left:3px solid #B8523A;border-radius:0 10px 10px 0;font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">
+        <strong style="font-weight:600;color:#1F1814">Placeholder note:</strong> all client names, quotes, and metrics on this page are placeholders. Real content drops in here when supplied.
+      </div>
+    </section>
+
+    <!-- Featured -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:32px 40px 24px">
+      <div style="background:#fff;border:1px solid #E8E0D2;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr" class="dim-hero-grid">
+        <div style="padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div data-i18n="cases.featured.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:14px">Featured · Pub</div>
+            <div data-i18n="cases.featured.quote" style="font:400 36px/1.15 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin-bottom:14px;text-wrap:balance">"Placeholder pull-quote about how the team can finally update the menu without waiting on the website agency."</div>
+            <div data-i18n="cases.featured.body" style="font:400 14px/1.5 'Instrument Sans',sans-serif;color:#4A4036">Placeholder client story — a paragraph describing the venue before Dimonova, the change after, and one specific outcome (faster updates, more menu views, dish that surprised them).</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:32px">
+            <div style="width:48px;height:48px;border-radius:50%;background:#D69B7F;border:2px solid #FAF6F0"></div>
+            <div>
+              <div data-i18n="cases.featured.client" style="font:500 15px/1 'Instrument Sans',sans-serif;color:#1F1814">Client name</div>
+              <div data-i18n="cases.featured.role" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:3px">Role · Venue name</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 10px,#EAE0CC 10px,#EAE0CC 20px);min-height:380px;display:flex;align-items:center;justify-content:center;position:relative">
+          <div data-i18n="cases.featured.photo_badge" style="position:absolute;top:18px;left:18px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          <div data-i18n="cases.featured.photo_pill" style="background:#1F1814;color:#FAF6F0;padding:12px 20px;border-radius:999px;font:500 13px/1 'Instrument Sans',sans-serif">Featured venue photo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:32px 40px">
+      <div class="dim-stack-md" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <!-- repeated cards -->
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_restaurant" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Restaurant</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_pub" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Pub</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_cafe" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Café</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_restaurant" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Restaurant</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_pub" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Pub</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;overflow:hidden;transition:transform .2s,box-shadow .2s" data-hover="transform:translateY(-3px);box-shadow:0 20px 40px -24px rgba(31,24,20,.18)">
+          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);position:relative">
+            <div data-i18n="cases.grid.photo" style="position:absolute;top:14px;left:14px;font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">venue photo</div>
+          </div>
+          <div style="padding:24px">
+            <div data-i18n="cases.grid.type_cafe" style="font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#B8523A;margin-bottom:10px">Café</div>
+            <div data-i18n="cases.grid.venue" style="font:500 18px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin-bottom:8px">Venue name placeholder</div>
+            <div data-i18n="cases.grid.summary" style="font:400 13px/1.55 'Instrument Sans',sans-serif;color:#4A4036">One-line summary of what changed for them — placeholder until real content drops in.</div>
+            <div style="display:flex;justify-content:space-between;margin-top:18px;padding-top:18px;border-top:1px solid #F1E8DA">
+              <div>
+                <div data-i18n="cases.grid.live_since" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Live since</div>
+                <div data-i18n="cases.grid.live_value" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-top:4px">TBD</div>
+              </div>
+              <div>
+                <div data-i18n="cases.grid.result" style="font:500 9px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70">Result</div>
+                <div data-i18n="cases.grid.result_value" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:14px;color:#5C6B4E;margin-top:4px">placeholder</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:80px 40px 120px;text-align:center">
+      <h2 class="dim-h2" data-i18n="cases.cta.title" style="font:400 44px/1.08 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 24px;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto">Want to be the next case study?</h2>
+      <button data-nav="contact" data-i18n="common.demo_arrow" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:16px 26px;border-radius:999px" data-hover="background:#9B4530">Request a demo →</button>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- ABOUT                                                             -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isAbout" data-default="false">
+  <main class="dim-page">
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px">
+      <div data-i18n="about.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">About</div>
+      <h1 class="dim-h1" data-i18n-html="about.title" style="font:400 64px/1.04 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;max-width:880px;margin:0 0 22px">A small team. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">A specific job.</em></h1>
+      <p data-i18n="about.intro" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;max-width:640px;margin:0">Dimonova exists because the menu — the most-read page of any restaurant's website — was being treated as an afterthought. We build it, run it, and look after it for you.</p>
+    </section>
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:48px 40px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1.2fr 1fr;gap:64px;align-items:start">
+        <div>
+          <div data-i18n="about.why.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:14px">Why we exist</div>
+          <h2 class="dim-h2" data-i18n="about.why.title" style="font:400 32px/1.15 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance">Most digital menus are bad. The good ones are too much work.</h2>
+          <p data-i18n="about.why.p1" style="font:400 15px/1.7 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 16px">Every restaurant has the same problem: the menu changes constantly, but the website never reflects it. PDFs are out of date. The website agency is on a two-week ticket queue. The QR code product is a nightmare to edit. Somewhere along the way, the menu — the thing diners actually want to look at — became the worst-maintained part of the venue's online presence.</p>
+          <p data-i18n="about.why.p2" style="font:400 15px/1.7 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 16px">We built Dimonova because that problem isn't really a software problem. It's a service problem. Software doesn't make your menu professional — a designer does. Software doesn't link it to your website — a developer does. Software doesn't train your team — a person does. So we do all of that, and the software is what makes it cheap enough to make sense.</p>
+          <p data-i18n="about.why.p3" style="font:400 15px/1.7 'Instrument Sans',sans-serif;color:#4A4036;margin:0">We work with restaurants, pubs, and cafés. We don't work with chains — bespoke setup wouldn't scale, and they don't need it.</p>
+        </div>
+
+        <div style="background:#F1E8DA;border-radius:20px;padding:32px;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;min-height:340px">
+          <div data-i18n="about.why.aside_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#1F1814;margin-bottom:18px">In short</div>
+          <div data-i18n="about.why.aside_quote" style="font:400 30px/1.25 'Instrument Serif',serif;font-style:italic;color:#1F1814">"We make digital menus for places that take their food seriously and don't want to think about software."</div>
+          <div data-i18n="about.why.aside_sign" style="font:500 12px/1 'Instrument Sans',sans-serif;color:#8A7E70;letter-spacing:.16em;text-transform:uppercase;margin-top:32px">The Dimonova team</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px">
+      <div data-i18n="about.principles.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">How we work</div>
+      <h2 class="dim-h2" data-i18n="about.principles.title" style="font:400 36px/1.1 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 40px;text-wrap:balance;max-width:680px">Three principles, and not many more.</h2>
+
+      <div class="dim-stack-md" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:32px">
+          <div style="font:400 40px/1 'Instrument Serif',serif;font-style:italic;color:#B8523A;margin-bottom:18px">i.</div>
+          <h3 data-i18n="about.principles.p1_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 10px">Do the work for them.</h3>
+          <p data-i18n="about.principles.p1_body" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0">If onboarding takes the customer more than 30 minutes of their time, we've designed it wrong.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:32px">
+          <div style="font:400 40px/1 'Instrument Serif',serif;font-style:italic;color:#B8523A;margin-bottom:18px">ii.</div>
+          <h3 data-i18n="about.principles.p2_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 10px">Pricing they can predict.</h3>
+          <p data-i18n="about.principles.p2_body" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0">Flat monthly. No per-cover charges, no per-dish charges, no surprise invoices on busy weeks.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:32px">
+          <div style="font:400 40px/1 'Instrument Serif',serif;font-style:italic;color:#B8523A;margin-bottom:18px">iii.</div>
+          <h3 data-i18n="about.principles.p3_title" style="font:500 20px/1.2 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.01em;margin:0 0 10px">Their brand, not ours.</h3>
+          <p data-i18n="about.principles.p3_body" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0">The menu lives on the venue's domain, in the venue's style. We're the ones quietly making it work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team placeholder -->
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px">
+      <div data-i18n="about.team.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">The team</div>
+      <h2 class="dim-h2" data-i18n="about.team.title" style="font:400 32px/1.15 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 32px">The people you'll actually talk to.</h2>
+
+      <div class="dim-stack4-md" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+        <div>
+          <div data-i18n="about.team.portrait" style="aspect-ratio:1;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);border-radius:14px;display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">portrait</div>
+          <div data-i18n="about.team.name" style="font:500 16px/1.2 'Instrument Sans',sans-serif;color:#1F1814;margin-top:14px">Name placeholder</div>
+          <div data-i18n="about.team.role1" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Founder &amp; build lead</div>
+        </div>
+        <div>
+          <div data-i18n="about.team.portrait" style="aspect-ratio:1;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);border-radius:14px;display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">portrait</div>
+          <div data-i18n="about.team.name" style="font:500 16px/1.2 'Instrument Sans',sans-serif;color:#1F1814;margin-top:14px">Name placeholder</div>
+          <div data-i18n="about.team.role2" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Design &amp; styling</div>
+        </div>
+        <div>
+          <div data-i18n="about.team.portrait" style="aspect-ratio:1;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);border-radius:14px;display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">portrait</div>
+          <div data-i18n="about.team.name" style="font:500 16px/1.2 'Instrument Sans',sans-serif;color:#1F1814;margin-top:14px">Name placeholder</div>
+          <div data-i18n="about.team.role3" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Customer success</div>
+        </div>
+        <div>
+          <div data-i18n="about.team.portrait" style="aspect-ratio:1;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);border-radius:14px;display:flex;align-items:flex-end;justify-content:flex-start;padding:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase">portrait</div>
+          <div data-i18n="about.team.name" style="font:500 16px/1.2 'Instrument Sans',sans-serif;color:#1F1814;margin-top:14px">Name placeholder</div>
+          <div data-i18n="about.team.role4" style="font:400 13px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:4px">Engineering</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 120px;text-align:center">
+      <h2 class="dim-h2" data-i18n="about.cta.title" style="font:400 44px/1.08 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin:0 0 24px;text-wrap:balance;max-width:680px;margin-left:auto;margin-right:auto">Want to see how it'd work for your venue?</h2>
+      <button data-nav="contact" data-i18n="common.demo_arrow" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#1F1814;padding:16px 26px;border-radius:999px" data-hover="background:#2D2520">Request a demo →</button>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- CONTACT                                                           -->
+  <!-- ================================================================ -->
+  <div class="sc-if" data-if="isContact" data-default="false">
+  <main class="dim-page">
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:64px 40px 40px">
+      <div data-i18n="contact.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#B8523A;margin-bottom:18px">Contact</div>
+      <h1 class="dim-h1" data-i18n-html="contact.title" style="font:400 60px/1.04 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.03em;text-wrap:balance;max-width:820px;margin:0 0 22px">Tell us about your venue. <em style="font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A">We'll do the rest.</em></h1>
+      <p data-i18n="contact.intro" style="font:400 17px/1.55 'Instrument Sans',sans-serif;color:#4A4036;max-width:600px;margin:0">A demo is usually 20 minutes — we'll show you the dashboard, walk through real venue setups, and quote you on the call.</p>
+    </section>
+
+    <section class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:32px 40px 120px">
+      <div class="dim-hero-grid" style="display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start">
+
+        <!-- FORM -->
+        <div style="background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:40px">
+          <div class="sc-if" data-if="submitted" data-default="false">
+            <div class="dim-pop" style="padding:32px 0;text-align:center">
+              <div style="width:64px;height:64px;border-radius:50%;background:#F1E8DA;color:#B8523A;display:inline-flex;align-items:center;justify-content:center;font:500 28px/1 'Instrument Sans',sans-serif;margin-bottom:20px">✓</div>
+              <h2 data-i18n="contact.success.title" style="font:400 30px/1.15 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.02em;margin:0 0 12px">Got it. We'll be in touch.</h2>
+              <p data-i18n="contact.success.body" style="font:400 15px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 auto 24px;max-width:420px">Expect an email from our team within one working day to book the demo. If it's urgent, message us on WhatsApp.</p>
+              <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+                <button data-action="toggle-wa" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:13px 20px;border:1px solid #1F1814;border-radius:999px;display:inline-flex;align-items:center;gap:8px" data-hover="background:#1F1814;color:#FAF6F0">
+                  <span style="width:12px;height:12px;border-radius:50%;background:#25D366"></span>
+                  <span data-i18n="contact.success.wa">WhatsApp us</span>
+                </button>
+                <button data-action="reset-form" data-i18n="contact.success.again" style="font:500 14px/1 'Instrument Sans',sans-serif;color:#8A7E70;padding:13px 18px">Send another</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sc-if" data-if="showForm" data-default="true">
+            <form data-action="submit-form">
+              <div data-i18n="contact.form.eyebrow" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:24px">Request a demo</div>
+
+              <div style="display:flex;flex-direction:column;gap:20px">
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px" class="dim-stack-md">
+                  <div>
+                    <label data-i18n="contact.form.name_label" style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">Your name</label>
+                    <input type="text" data-field="name" data-i18n-placeholder="contact.form.name_ph" placeholder="Aoife Kennedy" style="width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1 'Instrument Sans',sans-serif;color:#1F1814;transition:border-color .15s,box-shadow .15s" data-focus="outline:none;border-color:#B8523A;box-shadow:0 0 0 3px rgba(184,82,58,.15)" />
+                    <div class="sc-if" data-if="errors.name" data-default="false"><div style="font:400 12px/1.4 'Instrument Sans',sans-serif;color:#B8523A;margin-top:6px"></div></div>
+                  </div>
+                  <div>
+                    <label data-i18n="contact.form.email_label" style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">Email</label>
+                    <input type="email" data-field="email" data-i18n-placeholder="contact.form.email_ph" placeholder="aoife@crowingcock.com" style="width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1 'Instrument Sans',sans-serif;color:#1F1814;transition:border-color .15s,box-shadow .15s" data-focus="outline:none;border-color:#B8523A;box-shadow:0 0 0 3px rgba(184,82,58,.15)" />
+                    <div class="sc-if" data-if="errors.email" data-default="false"><div style="font:400 12px/1.4 'Instrument Sans',sans-serif;color:#B8523A;margin-top:6px"></div></div>
+                  </div>
+                </div>
+
+                <div>
+                  <label data-i18n="contact.form.venue_label" style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px">Venue name</label>
+                  <input type="text" data-field="venue" data-i18n-placeholder="contact.form.venue_ph" placeholder="The Crowing Cock" style="width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1 'Instrument Sans',sans-serif;color:#1F1814;transition:border-color .15s,box-shadow .15s" data-focus="outline:none;border-color:#B8523A;box-shadow:0 0 0 3px rgba(184,82,58,.15)" />
+                  <div class="sc-if" data-if="errors.venue" data-default="false"><div style="font:400 12px/1.4 'Instrument Sans',sans-serif;color:#B8523A;margin-top:6px"></div></div>
+                </div>
+
+                <div>
+                  <label data-i18n="contact.form.vtype_label" style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:10px">Venue type</label>
+                  <div style="display:flex;gap:8px;flex-wrap:wrap">
+                    <button type="button" data-vtype="restaurant" data-i18n="contact.form.vtype_restaurant" style="padding:10px 16px;border-radius:999px;border:1px solid #1F1814;background:#1F1814;color:#FAF6F0;font:500 13px/1 'Instrument Sans',sans-serif;transition:all .15s">Restaurant</button>
+                    <button type="button" data-vtype="pub" data-i18n="contact.form.vtype_pub" style="padding:10px 16px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif;transition:all .15s">Pub</button>
+                    <button type="button" data-vtype="cafe" data-i18n="contact.form.vtype_cafe" style="padding:10px 16px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif;transition:all .15s">Café</button>
+                    <button type="button" data-vtype="other" data-i18n="contact.form.vtype_other" style="padding:10px 16px;border-radius:999px;border:1px solid #E8E0D2;background:transparent;color:#1F1814;font:500 13px/1 'Instrument Sans',sans-serif;transition:all .15s">Other</button>
+                  </div>
+                </div>
+
+                <div>
+                  <label style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px"><span data-i18n="contact.form.phone_label">Phone</span> <span data-i18n="contact.form.optional" style="color:#8A7E70;font-weight:400">(optional)</span></label>
+                  <input type="tel" data-field="phone" data-i18n-placeholder="contact.form.phone_ph" placeholder="+353 …" style="width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1 'Instrument Sans',sans-serif;color:#1F1814;transition:border-color .15s,box-shadow .15s" data-focus="outline:none;border-color:#B8523A;box-shadow:0 0 0 3px rgba(184,82,58,.15)" />
+                </div>
+
+                <div>
+                  <label style="display:block;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;margin-bottom:8px"><span data-i18n="contact.form.message_label">Anything we should know?</span> <span data-i18n="contact.form.optional" style="color:#8A7E70;font-weight:400">(optional)</span></label>
+                  <textarea data-field="message" rows="4" data-i18n-placeholder="contact.form.message_ph" placeholder="Menu size, current website, anything specific you'd like to see on the demo…" style="width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814;resize:vertical;transition:border-color .15s,box-shadow .15s" data-focus="outline:none;border-color:#B8523A;box-shadow:0 0 0 3px rgba(184,82,58,.15)"></textarea>
+                </div>
+
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px">
+                  <div data-i18n="contact.form.disclaimer" style="font:400 12px/1.5 'Instrument Sans',sans-serif;color:#8A7E70;max-width:280px">We'll only use this to set up your demo. No marketing list.</div>
+                  <button type="submit" data-i18n="contact.form.submit" style="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:15px 24px;border-radius:999px;transition:background .15s,transform .15s" data-hover="background:#9B4530;transform:translateY(-1px)">Request a demo →</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- SIDE PANEL -->
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="background:#F1E8DA;border-radius:18px;padding:28px">
+            <div data-i18n="contact.side.chat_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#1F1814;margin-bottom:14px">Prefer to chat?</div>
+            <p data-i18n="contact.side.chat_body" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#4A4036;margin:0 0 18px">Faster than email. We're usually back to you within the hour during opening times.</p>
+            <button data-action="toggle-wa" style="width:100%;font:600 14px/1 'Instrument Sans',sans-serif;color:#1F1814;background:#FAF6F0;padding:14px 18px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #1F1814" data-hover="background:#1F1814;color:#FAF6F0">
+              <span style="width:14px;height:14px;border-radius:50%;background:#25D366"></span>
+              <span data-i18n="contact.side.chat_btn">Open WhatsApp</span>
+            </button>
+          </div>
+
+          <div style="background:#fff;border:1px solid #E8E0D2;border-radius:18px;padding:28px">
+            <div data-i18n="contact.side.old_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8A7E70;margin-bottom:14px">Or, the old fashioned way</div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div>
+                <div data-i18n="contact.side.email_label" style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:4px">Email</div>
+                <div style="font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814">hello@dimonova.com</div>
+              </div>
+              <div>
+                <div data-i18n="contact.side.phone_label" style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:4px">Phone</div>
+                <div style="font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814">+353 (0)1 555 0199</div>
+              </div>
+              <div>
+                <div data-i18n="contact.side.hours_label" style="font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:4px">Hours</div>
+                <div data-i18n-html="contact.side.hours_value" style="font:500 14px/1.5 'Instrument Sans',sans-serif;color:#1F1814">Mon — Fri, 9am — 6pm<br>Sat, 10am — 2pm</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:#1F1814;color:#FAF6F0;border-radius:18px;padding:28px">
+            <div data-i18n="contact.side.sell_quote" style="font-family:'Instrument Serif',serif;font-style:italic;font-size:20px;line-height:1.4;color:#FAF6F0;margin-bottom:16px">"We'll quote you on the call. No follow-up sales sequences, no pressure."</div>
+            <div data-i18n="contact.side.sell_label" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#D69B7F">How we sell</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- FOOTER                                                            -->
+  <!-- ================================================================ -->
+  <footer style="background:#1F1814;color:#FAF6F0;margin-top:0">
+    <div class="dim-pad-h" style="max-width:1240px;margin:0 auto;padding:72px 40px 40px">
+      <div class="dim-footer-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px">
+        <div>
+          <button data-nav="home" style="display:flex;align-items:center;gap:10px;margin-bottom:18px">
+            <div style="width:28px;height:28px;border-radius:8px;background:#FAF6F0;display:flex;align-items:center;justify-content:center">
+              <div style="width:10px;height:10px;border-radius:50%;background:#B8523A"></div>
+            </div>
+            <div style="font:600 19px/1 'Instrument Sans',sans-serif;color:#FAF6F0;letter-spacing:-.015em">Dimonova</div>
+          </button>
+          <p data-i18n="footer.tagline" style="font:400 14px/1.6 'Instrument Sans',sans-serif;color:#B8A89A;margin:0 0 24px;max-width:340px">Digital menus and dashboards for restaurants, pubs, and cafés that take their food seriously.</p>
+          <div style="display:flex;gap:10px">
+            <button data-action="toggle-wa" style="display:inline-flex;align-items:center;gap:8px;font:500 13px/1 'Instrument Sans',sans-serif;color:#FAF6F0;padding:10px 14px;border:1px solid #3A2F26;border-radius:999px" data-hover="background:#3A2F26">
+              <span style="width:10px;height:10px;border-radius:50%;background:#25D366"></span>
+              <span data-i18n="nav.whatsapp">WhatsApp</span>
+            </button>
+            <button data-nav="contact" data-i18n="nav.demo" style="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;background:#FAF6F0;padding:10px 16px;border-radius:999px" data-hover="background:#F1E8DA">Request a demo</button>
+          </div>
+        </div>
+
+        <div>
+          <div data-i18n="footer.col_product" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:18px">Product</div>
+          <div style="display:flex;flex-direction:column;gap:12px;font:400 14px/1 'Instrument Sans',sans-serif">
+            <button data-nav="features" data-i18n="nav.features" style="text-align:left;color:#FAF6F0" data-hover="color:#D69B7F">Features</button>
+            <button data-nav="pricing" data-i18n="nav.pricing" style="text-align:left;color:#FAF6F0" data-hover="color:#D69B7F">Pricing</button>
+            <button data-nav="cases" data-i18n="nav.cases" style="text-align:left;color:#FAF6F0" data-hover="color:#D69B7F">Case studies</button>
+          </div>
+        </div>
+
+        <div>
+          <div data-i18n="footer.col_company" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:18px">Company</div>
+          <div style="display:flex;flex-direction:column;gap:12px;font:400 14px/1 'Instrument Sans',sans-serif">
+            <button data-nav="about" data-i18n="nav.about" style="text-align:left;color:#FAF6F0" data-hover="color:#D69B7F">About</button>
+            <button data-nav="contact" data-i18n="nav.contact" style="text-align:left;color:#FAF6F0" data-hover="color:#D69B7F">Contact</button>
+          </div>
+        </div>
+
+        <div>
+          <div data-i18n="footer.col_contact" style="font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#8A7E70;margin-bottom:18px">Contact</div>
+          <div style="display:flex;flex-direction:column;gap:12px;font:400 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0">
+            <div>hello@dimonova.com</div>
+            <div>+353 (0)1 555 0199</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding-top:28px;border-top:1px solid #3A2F26;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font:400 12px/1 'Instrument Sans',sans-serif;color:#8A7E70">
+        <div data-i18n="footer.rights">© 2026 Dimonova. All rights reserved.</div>
+        <div style="display:flex;gap:24px">
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Cookies</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================================================ -->
+  <!-- WHATSAPP STICKY                                                   -->
+  <!-- ================================================================ -->
+  <div style="position:fixed;right:24px;bottom:24px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:14px;pointer-events:none">
+
+    <div class="sc-if" data-if="waOpen" data-default="false">
+      <div class="dim-pop" style="pointer-events:auto;width:320px;background:#FAF6F0;border-radius:18px;box-shadow:0 24px 48px -16px rgba(31,24,20,.35);overflow:hidden;border:1px solid #E8E0D2">
+        <div style="background:#075E54;color:#FAF6F0;padding:18px 20px;display:flex;align-items:center;gap:12px">
+          <div style="width:36px;height:36px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0">D</div>
+          <div style="flex:1">
+            <div data-i18n="wa.name" style="font:600 14px/1 'Instrument Sans',sans-serif">Dimonova team</div>
+            <div data-i18n="wa.status" style="font:400 11px/1.3 'Instrument Sans',sans-serif;color:#B0D4CC;margin-top:3px">Usually back within an hour</div>
+          </div>
+          <button data-action="toggle-wa" style="color:#FAF6F0;opacity:.8;font:400 18px/1 'Instrument Sans',sans-serif;padding:4px 8px">×</button>
+        </div>
+        <div style="padding:20px;background:#ECE5DD">
+          <div data-i18n="wa.greeting" style="background:#FAF6F0;border-radius:10px 10px 10px 2px;padding:12px 14px;font:400 13px/1.5 'Instrument Sans',sans-serif;color:#1F1814;max-width:240px;box-shadow:0 1px 1px rgba(0,0,0,.08);margin-bottom:14px">
+            Hi 👋 — what kind of venue are you running? Happy to share a 30-second walkthrough of the dashboard.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
+            <div data-i18n="wa.chip_restaurant" style="background:#FAF6F0;border:1px solid #E8E0D2;border-radius:999px;padding:9px 14px;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;align-self:flex-end" data-hover="background:#F1E8DA">I run a restaurant</div>
+            <div data-i18n="wa.chip_pub" style="background:#FAF6F0;border:1px solid #E8E0D2;border-radius:999px;padding:9px 14px;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;align-self:flex-end" data-hover="background:#F1E8DA">I run a pub</div>
+            <div data-i18n="wa.chip_cafe" style="background:#FAF6F0;border:1px solid #E8E0D2;border-radius:999px;padding:9px 14px;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814;align-self:flex-end" data-hover="background:#F1E8DA">I run a café</div>
+          </div>
+        </div>
+        <div style="padding:14px 20px;background:#FAF6F0;border-top:1px solid #E8E0D2">
+          <button style="width:100%;background:#25D366;color:#FAF6F0;font:600 13px/1 'Instrument Sans',sans-serif;padding:12px 16px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px" data-hover="background:#1FB755">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.78 8.78 0 0 0 12 3.5 8.83 8.83 0 0 0 3.17 12.3a8.78 8.78 0 0 0 1.18 4.4L3 21l4.45-1.17a8.83 8.83 0 0 0 4.55 1.25h.01A8.83 8.83 0 0 0 20.83 12.3a8.78 8.78 0 0 0-3.23-5.98ZM12 19.6a7.3 7.3 0 0 1-3.72-1.02l-.27-.16-2.64.7.7-2.58-.17-.27a7.3 7.3 0 0 1 11.32-9 7.27 7.27 0 0 1 2.15 5.13A7.34 7.34 0 0 1 12 19.6Z"/></svg>
+            <span data-i18n="wa.continue">Continue to WhatsApp</span>
+          </button>
+          <div data-i18n="wa.disclaimer" style="font:400 10px/1.4 'Instrument Sans',sans-serif;color:#8A7E70;margin-top:8px;text-align:center">+353 (0)1 555 0199 · prototype, won't actually open</div>
+        </div>
+      </div>
+    </div>
+
+    <button data-action="toggle-wa" style="pointer-events:auto;width:60px;height:60px;border-radius:50%;background:#25D366;color:#FAF6F0;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 24px -8px rgba(37,211,102,.5);transition:transform .15s" data-hover="transform:scale(1.05);background:#1FB755">
+      <div class="sc-if" data-if="waClosed" data-default="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.78 8.78 0 0 0 12 3.5 8.83 8.83 0 0 0 3.17 12.3a8.78 8.78 0 0 0 1.18 4.4L3 21l4.45-1.17a8.83 8.83 0 0 0 4.55 1.25h.01A8.83 8.83 0 0 0 20.83 12.3a8.78 8.78 0 0 0-3.23-5.98Zm-2.86 9.07c-.21.59-1.21 1.13-1.7 1.16-.43.03-.97.04-1.57-.1a14.4 14.4 0 0 1-1.42-.53 11.1 11.1 0 0 1-4.23-3.74c-.32-.43-.86-1.27-.86-2.44 0-1.17.61-1.74.83-1.98a.86.86 0 0 1 .63-.3l.45.01c.14 0 .34-.05.53.4l.74 1.79c.06.13.1.27.02.43-.09.16-.13.26-.26.41l-.39.45c-.13.13-.26.27-.11.53.14.26.65 1.07 1.39 1.74.95.86 1.76 1.13 2.01 1.26.26.13.4.11.55-.06.15-.18.64-.74.81-1 .17-.26.34-.21.57-.13.23.09 1.45.68 1.7.81.25.13.41.19.47.3.06.1.06.62-.15 1.22Z"/></svg>
+      </div>
+      <div class="sc-if" data-if="waOpen" data-default="false">
+        <span style="font:400 26px/1 'Instrument Sans',sans-serif;color:#FAF6F0">×</span>
+      </div>
+    </button>
+  </div>
+
+</div>
+
+<script src="i18n.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* ============================================================
+   Dimonova — styles
+   Base styles & responsive rules are ported verbatim from the
+   original Claude Design template; runtime helpers are appended.
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:#FAF6F0;color:#1F1814;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  a,button{color:inherit;text-decoration:none;font-family:inherit}
+  button{border:none;background:none;padding:0;cursor:pointer}
+  input,textarea,select{font-family:inherit;color:inherit}
+  .dim-page{animation:dimFade .42s cubic-bezier(.22,.61,.36,1) both}
+  @keyframes dimFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  @keyframes dimPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  @keyframes dimRise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .dim-wa-pulse{animation:dimPulse 2.4s ease-in-out infinite}
+  .dim-pop{animation:dimRise .25s ease both}
+  @media (max-width:900px){
+    .dim-hero-grid{grid-template-columns:1fr!important}
+    .dim-hero-visual{height:520px!important;max-width:380px;margin:0 auto}
+    .dim-hide-md{display:none!important}
+    .dim-show-md{display:flex!important}
+    .dim-pad-h{padding-left:24px!important;padding-right:24px!important}
+    .dim-h1{font-size:42px!important;line-height:1.05!important}
+    .dim-h1-accent{font-size:46px!important}
+    .dim-h2{font-size:30px!important;line-height:1.1!important}
+    .dim-stack-md{grid-template-columns:1fr!important}
+    .dim-stack4-md{grid-template-columns:1fr 1fr!important}
+    .dim-footer-grid{grid-template-columns:1fr 1fr!important}
+  }
+  @media (max-width:560px){
+    .dim-stack4-md{grid-template-columns:1fr!important}
+    .dim-footer-grid{grid-template-columns:1fr!important}
+    .dim-h1{font-size:34px!important}
+    .dim-h1-accent{font-size:38px!important}
+  }
+
+/* --- runtime helpers (replace the Claude Design runtime) --- */
+.sc-if[hidden]{display:none!important}
