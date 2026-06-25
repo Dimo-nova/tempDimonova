@@ -37,7 +37,7 @@
 
       // ---- home: hero ----
       "home.hero.eyebrow": "For restaurants, pubs & cafés",
-      "home.hero.title1": "A menu worth <em class=\"dim-h1-accent\" style=\"font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px\">showing off</em>,",
+      "home.hero.title1": "A digital menu,",
       "home.hero.title2": "built and set up for you.",
       "home.hero.body": "We build your digital menu, style it to your brand, link it into your existing website, and train your team. You change a dish in two taps.",
       "home.hero.avatars": "Loved by independent venues<br>across the country",
@@ -55,7 +55,7 @@
 
       // ---- home: features summary ----
       "home.feat.eyebrow": "What you get",
-      "home.feat.title": "Software that feels like <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">your venue</em>, not a generic template.",
+      "home.feat.title": "Built around your menu and your brand, not a one-size-fits-all template.",
       "home.feat.see_all": "See all features →",
       "home.feat.c1_title": "A digital menu, properly designed",
       "home.feat.c1_body": "Photos, descriptions, allergens, prices — all laid out so diners actually read them.",
@@ -66,7 +66,7 @@
 
       // ---- home: how it works ----
       "home.how.eyebrow": "How it works",
-      "home.how.title": "We do the heavy lifting. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">You run the show.</em>",
+      "home.how.title": "We set it up. You run it.",
       "home.how.s1_title": "Send your menu",
       "home.how.s1_body": "PDF, a phone photo of the chalkboard, a Word doc — whatever you've got. We take it from there.",
       "home.how.s2_title": "We build & style it",
@@ -80,8 +80,8 @@
 
       // ---- home: differentiator ----
       "home.diff.eyebrow": "The difference",
-      "home.diff.title": "This isn't <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">another tool</em> to learn. It's a service.",
-      "home.diff.body": "Most digital menu products hand you a builder, a help centre, and a free trial. We don't. We build the thing for you, plug it into your site, and sit down with your team to walk them through it.",
+      "home.diff.title": "",
+      "home.diff.body": "Most digital menu products give you a builder, a help centre, and a free trial. We don't — we build it, set it up, and walk your team through it.",
       "home.diff.p1": "We build your menu from whatever you have — PDF, photo, doc.",
       "home.diff.p2": "We style it to match your brand and venue.",
       "home.diff.p3": "We link it into your existing website ourselves.",
@@ -101,7 +101,7 @@
       "home.proof.stat2_unit": "seconds",
 
       // ---- home: pricing teaser ----
-      "home.price.eyebrow": "Pricing, plainly",
+      "home.price.eyebrow": "Pricing",
       "home.price.title": "A one-time setup fee, then a flat monthly subscription.",
       "home.price.body": "Hosting, support, and updates included. No per-cover charges, no per-dish charges, no surprise invoices.",
       "home.price.see_full": "See full pricing →",
@@ -109,12 +109,12 @@
 
       // ---- home: closing CTA ----
       "home.cta.eyebrow": "Ready when you are",
-      "home.cta.title": "Let's get your menu <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">live</em>.",
-      "home.cta.body": "A 20-minute demo. We'll show you the dashboard, walk through real venue setups, and answer everything. No commitment.",
+      "home.cta.title": "Let's get your menu live.",
+      "home.cta.body": "A 20-minute demo. We'll show you the dashboard, walk through real venue setups, and answer your questions. No commitment.",
 
       // ---- features: intro ----
       "features.eyebrow": "Features",
-      "features.title": "Everything you need to run your menu. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Nothing you don't.</em>",
+      "features.title": "Everything you need to run your menu. Nothing you don't.",
       "features.intro": "Four parts to Dimonova: the digital menu your diners see, the dashboard your team runs it from, the analytics that tell you what's working, and the done-for-you onboarding that gets all of it live.",
 
       // ---- features: 1 digital menu ----
@@ -161,7 +161,7 @@
 
       // ---- features: 4 onboarding ----
       "features.f4.eyebrow": "04 · Done-for-you onboarding",
-      "features.f4.title": "The part nobody else does. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">We do it for you.</em>",
+      "features.f4.title": "The part nobody else does. We do it for you.",
       "features.f4.c1_title": "Menu build",
       "features.f4.c1_body": "Send us your menu in whatever format you have. We type it up, structure it, organise it into sections, add allergens, and check every dish with you before going live.",
       "features.f4.c2_title": "Brand styling",
@@ -179,7 +179,7 @@
 
       // ---- pricing: intro ----
       "pricing.eyebrow": "Pricing",
-      "pricing.title": "Two charges. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">No surprises.</em>",
+      "pricing.title": "Two charges. No surprises.",
       "pricing.intro": "A one-time setup fee covers the build, styling, website linking, and team training. After that, a flat monthly subscription covers hosting, support, and updates.",
 
       // ---- pricing: setup card ----
@@ -260,7 +260,7 @@
 
       // ---- about: intro ----
       "about.eyebrow": "About",
-      "about.title": "A small team. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">A specific job.</em>",
+      "about.title": "A small team. A specific job.",
       "about.intro": "Dimonova exists because the menu — the most-read page of any restaurant's website — was being treated as an afterthought. We build it, run it, and look after it for you.",
 
       // ---- about: why we exist ----
@@ -383,7 +383,7 @@
 
       // ---- home: hero ----
       "home.hero.eyebrow": "Para restaurantes, pubs y cafeterías",
-      "home.hero.title1": "Una carta para <em class=\"dim-h1-accent\" style=\"font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px\">presumir</em>,",
+      "home.hero.title1": "Una carta digital,",
       "home.hero.title2": "creada y configurada para ti.",
       "home.hero.body": "Creamos tu carta digital, la adaptamos a tu marca, la integramos en tu web actual y formamos a tu equipo. Tú cambias un plato en dos toques.",
       "home.hero.avatars": "La eligen locales independientes<br>de todo el país",
@@ -401,7 +401,7 @@
 
       // ---- home: features summary ----
       "home.feat.eyebrow": "Lo que incluye",
-      "home.feat.title": "Un software que se siente como <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">tu local</em>, no una plantilla genérica.",
+      "home.feat.title": "Hecho a partir de tu carta y tu marca, no una plantilla genérica.",
       "home.feat.see_all": "Ver todas las características →",
       "home.feat.c1_title": "Una carta digital, bien diseñada",
       "home.feat.c1_body": "Fotos, descripciones, alérgenos y precios — presentados para que los clientes los lean de verdad.",
@@ -412,7 +412,7 @@
 
       // ---- home: how it works ----
       "home.how.eyebrow": "Cómo funciona",
-      "home.how.title": "Nosotros hacemos el trabajo duro. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Tú llevas las riendas.</em>",
+      "home.how.title": "Nosotros la configuramos. Tú la llevas.",
       "home.how.s1_title": "Envíanos tu carta",
       "home.how.s1_body": "Un PDF, una foto de la pizarra, un documento de Word — lo que tengas. Nosotros nos encargamos del resto.",
       "home.how.s2_title": "La creamos y la diseñamos",
@@ -426,8 +426,8 @@
 
       // ---- home: differentiator ----
       "home.diff.eyebrow": "La diferencia",
-      "home.diff.title": "Esto no es <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">otra herramienta</em> que aprender. Es un servicio.",
-      "home.diff.body": "La mayoría de productos de cartas digitales te dan un editor, un centro de ayuda y una prueba gratis. Nosotros no. Lo creamos por ti, lo integramos en tu web y nos sentamos con tu equipo para explicárselo.",
+      "home.diff.title": "",
+      "home.diff.body": "La mayoría de productos de cartas digitales te dan un editor, un centro de ayuda y una prueba gratis. Nosotros no — la creamos, la integramos en tu web y nos sentamos con tu equipo para explicársela.",
       "home.diff.p1": "Creamos tu carta con lo que tengas — PDF, foto o documento.",
       "home.diff.p2": "La diseñamos a juego con tu marca y tu local.",
       "home.diff.p3": "La integramos en tu web actual nosotros mismos.",
@@ -447,7 +447,7 @@
       "home.proof.stat2_unit": "segundos",
 
       // ---- home: pricing teaser ----
-      "home.price.eyebrow": "Precios, claros",
+      "home.price.eyebrow": "Precios",
       "home.price.title": "Un pago único de configuración y luego una cuota mensual fija.",
       "home.price.body": "Alojamiento, soporte y actualizaciones incluidos. Sin cargos por comensal, sin cargos por plato, sin facturas sorpresa.",
       "home.price.see_full": "Ver precios completos →",
@@ -455,12 +455,12 @@
 
       // ---- home: closing CTA ----
       "home.cta.eyebrow": "Cuando quieras",
-      "home.cta.title": "Pongamos tu carta <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">en línea</em>.",
-      "home.cta.body": "Una demo de 20 minutos. Te enseñamos el panel, repasamos casos reales y respondemos a todo. Sin compromiso.",
+      "home.cta.title": "Pongamos tu carta en línea.",
+      "home.cta.body": "Una demo de 20 minutos. Te enseñamos el panel, repasamos casos reales y respondemos tus preguntas. Sin compromiso.",
 
       // ---- features: intro ----
       "features.eyebrow": "Características",
-      "features.title": "Todo lo que necesitas para gestionar tu carta. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Nada que sobre.</em>",
+      "features.title": "Todo lo que necesitas para gestionar tu carta. Nada que sobre.",
       "features.intro": "Cuatro partes en Dimonova: la carta digital que ven tus clientes, el panel desde el que la gestiona tu equipo, las analíticas que te dicen qué funciona y la incorporación llave en mano que lo pone todo en marcha.",
 
       // ---- features: 1 digital menu ----
@@ -507,7 +507,7 @@
 
       // ---- features: 4 onboarding ----
       "features.f4.eyebrow": "04 · Incorporación llave en mano",
-      "features.f4.title": "La parte que nadie más hace. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">La hacemos por ti.</em>",
+      "features.f4.title": "La parte que nadie más hace. La hacemos por ti.",
       "features.f4.c1_title": "Montaje de la carta",
       "features.f4.c1_body": "Envíanos tu carta en el formato que tengas. La transcribimos, la estructuramos, la organizamos por secciones, añadimos los alérgenos y revisamos cada plato contigo antes de publicarla.",
       "features.f4.c2_title": "Diseño de marca",
@@ -525,7 +525,7 @@
 
       // ---- pricing: intro ----
       "pricing.eyebrow": "Precios",
-      "pricing.title": "Dos pagos. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Sin sorpresas.</em>",
+      "pricing.title": "Dos pagos. Sin sorpresas.",
       "pricing.intro": "Un pago único de configuración cubre el montaje, el diseño, la integración en la web y la formación del equipo. Después, una cuota mensual fija cubre el alojamiento, el soporte y las actualizaciones.",
 
       // ---- pricing: setup card ----
@@ -606,7 +606,7 @@
 
       // ---- about: intro ----
       "about.eyebrow": "Nosotros",
-      "about.title": "Un equipo pequeño. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Un trabajo concreto.</em>",
+      "about.title": "Un equipo pequeño. Un trabajo concreto.",
       "about.intro": "Dimonova existe porque la carta — la página más leída de la web de cualquier restaurante — se trataba como algo secundario. Nosotros la creamos, la gestionamos y la cuidamos por ti.",
 
       // ---- about: why we exist ----
@@ -728,7 +728,7 @@
 
       // ---- home: hero ----
       "home.hero.eyebrow": "Für Restaurants, Pubs & Cafés",
-      "home.hero.title1": "Eine Karte zum <em class=\"dim-h1-accent\" style=\"font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px\">Vorzeigen</em>,",
+      "home.hero.title1": "Eine digitale Speisekarte,",
       "home.hero.title2": "von uns erstellt und eingerichtet.",
       "home.hero.body": "Wir erstellen deine digitale Speisekarte, passen sie an deine Marke an, binden sie in deine bestehende Website ein und schulen dein Team. Ein Gericht änderst du mit zwei Fingertipps.",
       "home.hero.avatars": "Beliebt bei unabhängigen Lokalen<br>im ganzen Land",
@@ -746,7 +746,7 @@
 
       // ---- home: features summary ----
       "home.feat.eyebrow": "Das bekommst du",
-      "home.feat.title": "Software, die sich wie <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">dein Lokal</em> anfühlt, nicht wie eine Standardvorlage.",
+      "home.feat.title": "Aufgebaut rund um deine Karte und deine Marke, nicht um eine Standardvorlage.",
       "home.feat.see_all": "Alle Funktionen ansehen →",
       "home.feat.c1_title": "Eine digitale Speisekarte, richtig gestaltet",
       "home.feat.c1_body": "Fotos, Beschreibungen, Allergene, Preise — so angeordnet, dass die Gäste sie wirklich lesen.",
@@ -757,7 +757,7 @@
 
       // ---- home: how it works ----
       "home.how.eyebrow": "So funktioniert's",
-      "home.how.title": "Wir übernehmen die Schwerarbeit. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Du führst Regie.</em>",
+      "home.how.title": "Wir richten es ein. Du betreibst es.",
       "home.how.s1_title": "Schick uns deine Karte",
       "home.how.s1_body": "Ein PDF, ein Handyfoto der Tafel, ein Word-Dokument — was immer du hast. Den Rest übernehmen wir.",
       "home.how.s2_title": "Wir bauen & gestalten sie",
@@ -771,8 +771,8 @@
 
       // ---- home: differentiator ----
       "home.diff.eyebrow": "Der Unterschied",
-      "home.diff.title": "Das ist kein <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">weiteres Tool</em> zum Lernen. Es ist ein Service.",
-      "home.diff.body": "Die meisten Anbieter digitaler Speisekarten geben dir einen Editor, ein Hilfecenter und eine kostenlose Testphase. Wir nicht. Wir bauen die Sache für dich, binden sie in deine Website ein und setzen uns mit deinem Team zusammen, um es zu erklären.",
+      "home.diff.title": "",
+      "home.diff.body": "Die meisten Anbieter digitaler Speisekarten geben dir einen Editor, ein Hilfecenter und eine kostenlose Testphase. Wir nicht — wir bauen sie, richten sie ein und zeigen deinem Team, wie es geht.",
       "home.diff.p1": "Wir erstellen deine Karte aus dem, was du hast — PDF, Foto, Dokument.",
       "home.diff.p2": "Wir gestalten sie passend zu deiner Marke und deinem Lokal.",
       "home.diff.p3": "Wir binden sie selbst in deine bestehende Website ein.",
@@ -792,7 +792,7 @@
       "home.proof.stat2_unit": "Sekunden",
 
       // ---- home: pricing teaser ----
-      "home.price.eyebrow": "Preise, klar gesagt",
+      "home.price.eyebrow": "Preise",
       "home.price.title": "Eine einmalige Einrichtungsgebühr, dann ein fester Monatsbeitrag.",
       "home.price.body": "Hosting, Support und Updates inklusive. Keine Gebühren pro Gast, keine Gebühren pro Gericht, keine Überraschungsrechnungen.",
       "home.price.see_full": "Vollständige Preise ansehen →",
@@ -800,12 +800,12 @@
 
       // ---- home: closing CTA ----
       "home.cta.eyebrow": "Bereit, wenn du es bist",
-      "home.cta.title": "Bringen wir deine Karte <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">online</em>.",
-      "home.cta.body": "Eine 20-minütige Demo. Wir zeigen dir das Dashboard, gehen echte Einrichtungen durch und beantworten alles. Ohne Verpflichtung.",
+      "home.cta.title": "Bringen wir deine Karte online.",
+      "home.cta.body": "Eine 20-minütige Demo. Wir zeigen dir das Dashboard, gehen echte Einrichtungen durch und beantworten deine Fragen. Ohne Verpflichtung.",
 
       // ---- features: intro ----
       "features.eyebrow": "Funktionen",
-      "features.title": "Alles, was du brauchst, um deine Karte zu führen. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Nichts, was du nicht brauchst.</em>",
+      "features.title": "Alles, was du brauchst, um deine Karte zu führen. Nichts, was du nicht brauchst.",
       "features.intro": "Dimonova besteht aus vier Teilen: der digitalen Karte, die deine Gäste sehen, dem Dashboard, über das dein Team sie führt, der Analyse, die dir sagt, was funktioniert, und dem Rundum-Onboarding, das alles live bringt.",
 
       // ---- features: 1 digital menu ----
@@ -852,7 +852,7 @@
 
       // ---- features: 4 onboarding ----
       "features.f4.eyebrow": "04 · Rundum-Onboarding",
-      "features.f4.title": "Der Teil, den sonst niemand macht. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Wir machen ihn für dich.</em>",
+      "features.f4.title": "Der Teil, den sonst niemand macht. Wir machen ihn für dich.",
       "features.f4.c1_title": "Kartenaufbau",
       "features.f4.c1_body": "Schick uns deine Karte in dem Format, das du hast. Wir tippen sie ab, strukturieren sie, ordnen sie in Bereiche, ergänzen Allergene und prüfen jedes Gericht mit dir, bevor es live geht.",
       "features.f4.c2_title": "Markengestaltung",
@@ -870,7 +870,7 @@
 
       // ---- pricing: intro ----
       "pricing.eyebrow": "Preise",
-      "pricing.title": "Zwei Zahlungen. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Keine Überraschungen.</em>",
+      "pricing.title": "Zwei Zahlungen. Keine Überraschungen.",
       "pricing.intro": "Eine einmalige Einrichtungsgebühr deckt Aufbau, Gestaltung, Website-Einbindung und Team-Schulung ab. Danach deckt ein fester Monatsbeitrag Hosting, Support und Updates ab.",
 
       // ---- pricing: setup card ----
@@ -951,7 +951,7 @@
 
       // ---- about: intro ----
       "about.eyebrow": "Über uns",
-      "about.title": "Ein kleines Team. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Eine konkrete Aufgabe.</em>",
+      "about.title": "Ein kleines Team. Eine konkrete Aufgabe.",
       "about.intro": "Dimonova gibt es, weil die Karte — die meistgelesene Seite jeder Restaurant-Website — als Nebensache behandelt wurde. Wir erstellen sie, betreiben sie und kümmern uns für dich darum.",
 
       // ---- about: why we exist ----
@@ -1073,7 +1073,7 @@
 
       // ---- home: hero ----
       "home.hero.eyebrow": "Pour les restaurants, pubs et cafés",
-      "home.hero.title1": "Une carte qu'on aime <em class=\"dim-h1-accent\" style=\"font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px\">montrer</em>,",
+      "home.hero.title1": "Une carte numérique,",
       "home.hero.title2": "conçue et installée pour toi.",
       "home.hero.body": "Nous créons ta carte numérique, l'adaptons à ta marque, l'intégrons à ton site existant et formons ton équipe. Tu modifies un plat en deux tapotements.",
       "home.hero.avatars": "Adoptée par des établissements indépendants<br>dans tout le pays",
@@ -1091,7 +1091,7 @@
 
       // ---- home: features summary ----
       "home.feat.eyebrow": "Ce que tu obtiens",
-      "home.feat.title": "Un logiciel qui ressemble à <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">ton établissement</em>, pas à un modèle générique.",
+      "home.feat.title": "Conçue autour de ta carte et ta marque, pas un modèle unique pour tous.",
       "home.feat.see_all": "Voir toutes les fonctionnalités →",
       "home.feat.c1_title": "Une carte numérique, bien conçue",
       "home.feat.c1_body": "Photos, descriptions, allergènes, prix — disposés pour que les clients les lisent vraiment.",
@@ -1102,7 +1102,7 @@
 
       // ---- home: how it works ----
       "home.how.eyebrow": "Comment ça marche",
-      "home.how.title": "Nous faisons le gros du travail. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Tu mènes la danse.</em>",
+      "home.how.title": "Nous la configurons. Tu la gères.",
       "home.how.s1_title": "Envoie-nous ta carte",
       "home.how.s1_body": "Un PDF, une photo de l'ardoise, un document Word — ce que tu as. On s'occupe du reste.",
       "home.how.s2_title": "Nous la créons et la mettons en forme",
@@ -1116,8 +1116,8 @@
 
       // ---- home: differentiator ----
       "home.diff.eyebrow": "La différence",
-      "home.diff.title": "Ce n'est pas <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">un outil de plus</em> à apprendre. C'est un service.",
-      "home.diff.body": "La plupart des produits de carte numérique te donnent un éditeur, un centre d'aide et un essai gratuit. Pas nous. Nous créons la chose pour toi, l'intégrons à ton site et nous asseyons avec ton équipe pour tout lui expliquer.",
+      "home.diff.title": "",
+      "home.diff.body": "La plupart des produits de carte numérique te donnent un éditeur, un centre d'aide et un essai gratuit. Pas nous — nous la créons, l'intégrons à ton site et nous asseyons avec ton équipe pour tout lui expliquer.",
       "home.diff.p1": "Nous créons ta carte à partir de ce que tu as — PDF, photo, document.",
       "home.diff.p2": "Nous la mettons en forme pour qu'elle corresponde à ta marque et ton établissement.",
       "home.diff.p3": "Nous l'intégrons nous-mêmes à ton site existant.",
@@ -1137,7 +1137,7 @@
       "home.proof.stat2_unit": "secondes",
 
       // ---- home: pricing teaser ----
-      "home.price.eyebrow": "Tarifs, clairement",
+      "home.price.eyebrow": "Tarifs",
       "home.price.title": "Des frais d'installation uniques, puis un abonnement mensuel fixe.",
       "home.price.body": "Hébergement, support et mises à jour inclus. Pas de frais par couvert, pas de frais par plat, pas de factures surprises.",
       "home.price.see_full": "Voir tous les tarifs →",
@@ -1145,12 +1145,12 @@
 
       // ---- home: closing CTA ----
       "home.cta.eyebrow": "Prêt quand tu l'es",
-      "home.cta.title": "Mettons ta carte <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">en ligne</em>.",
-      "home.cta.body": "Une démo de 20 minutes. On te montre le tableau de bord, on parcourt de vraies installations et on répond à tout. Sans engagement.",
+      "home.cta.title": "Mettons ta carte en ligne.",
+      "home.cta.body": "Une démo de 20 minutes. On te montre le tableau de bord, on parcourt de vraies installations et on répond à tes questions. Sans engagement.",
 
       // ---- features: intro ----
       "features.eyebrow": "Fonctionnalités",
-      "features.title": "Tout ce qu'il te faut pour gérer ta carte. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Rien de superflu.</em>",
+      "features.title": "Tout ce qu'il te faut pour gérer ta carte. Rien de superflu.",
       "features.intro": "Quatre éléments dans Dimonova : la carte numérique que voient tes clients, le tableau de bord depuis lequel ton équipe la gère, les analyses qui te disent ce qui fonctionne, et l'intégration clé en main qui met le tout en ligne.",
 
       // ---- features: 1 digital menu ----
@@ -1197,7 +1197,7 @@
 
       // ---- features: 4 onboarding ----
       "features.f4.eyebrow": "04 · Intégration clé en main",
-      "features.f4.title": "La partie que personne d'autre ne fait. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Nous la faisons pour toi.</em>",
+      "features.f4.title": "La partie que personne d'autre ne fait. Nous la faisons pour toi.",
       "features.f4.c1_title": "Montage de la carte",
       "features.f4.c1_body": "Envoie-nous ta carte dans le format que tu as. Nous la saisissons, la structurons, l'organisons en sections, ajoutons les allergènes et vérifions chaque plat avec toi avant la mise en ligne.",
       "features.f4.c2_title": "Identité de marque",
@@ -1215,7 +1215,7 @@
 
       // ---- pricing: intro ----
       "pricing.eyebrow": "Tarifs",
-      "pricing.title": "Deux paiements. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Aucune surprise.</em>",
+      "pricing.title": "Deux paiements. Aucune surprise.",
       "pricing.intro": "Des frais d'installation uniques couvrent le montage, la mise en forme, l'intégration au site et la formation de l'équipe. Ensuite, un abonnement mensuel fixe couvre l'hébergement, le support et les mises à jour.",
 
       // ---- pricing: setup card ----
@@ -1296,7 +1296,7 @@
 
       // ---- about: intro ----
       "about.eyebrow": "À propos",
-      "about.title": "Une petite équipe. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Une mission précise.</em>",
+      "about.title": "Une petite équipe. Une mission précise.",
       "about.intro": "Dimonova existe parce que la carte — la page la plus lue du site de tout restaurant — était traitée comme un détail. Nous la créons, la gérons et nous en occupons pour toi.",
 
       // ---- about: why we exist ----
@@ -1418,7 +1418,7 @@
 
       // ---- home: hero ----
       "home.hero.eyebrow": "Para restaurantes, pubs e cafés",
-      "home.hero.title1": "Uma ementa para <em class=\"dim-h1-accent\" style=\"font-family:'Instrument Serif',serif;font-weight:400;font-style:italic;color:#B8523A;font-size:64px\">exibir</em>,",
+      "home.hero.title1": "Uma ementa digital,",
       "home.hero.title2": "criada e configurada para ti.",
       "home.hero.body": "Criamos a tua ementa digital, adaptamo-la à tua marca, integramo-la no teu site atual e formamos a tua equipa. Mudas um prato com dois toques.",
       "home.hero.avatars": "A escolha de espaços independentes<br>de todo o país",
@@ -1436,7 +1436,7 @@
 
       // ---- home: features summary ----
       "home.feat.eyebrow": "O que recebes",
-      "home.feat.title": "Software que parece <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">o teu espaço</em>, não um modelo genérico.",
+      "home.feat.title": "Feita a partir da tua ementa e da tua marca, não de um modelo igual para todos.",
       "home.feat.see_all": "Ver todas as funcionalidades →",
       "home.feat.c1_title": "Uma ementa digital, bem desenhada",
       "home.feat.c1_body": "Fotos, descrições, alergénios e preços — dispostos para que os clientes os leiam mesmo.",
@@ -1447,7 +1447,7 @@
 
       // ---- home: how it works ----
       "home.how.eyebrow": "Como funciona",
-      "home.how.title": "Nós fazemos o trabalho pesado. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Tu comandas o espetáculo.</em>",
+      "home.how.title": "Nós configuramos. Tu geres.",
       "home.how.s1_title": "Envia-nos a tua ementa",
       "home.how.s1_body": "Um PDF, uma foto do quadro, um documento Word — o que tiveres. Nós tratamos do resto.",
       "home.how.s2_title": "Criamo-la e desenhamo-la",
@@ -1461,8 +1461,8 @@
 
       // ---- home: differentiator ----
       "home.diff.eyebrow": "A diferença",
-      "home.diff.title": "Isto não é <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">mais uma ferramenta</em> para aprender. É um serviço.",
-      "home.diff.body": "A maioria dos produtos de ementa digital dá-te um editor, um centro de ajuda e um período de teste gratuito. Nós não. Criamos a coisa por ti, integramo-la no teu site e sentamo-nos com a tua equipa para lhe explicar tudo.",
+      "home.diff.title": "",
+      "home.diff.body": "A maioria dos produtos de ementa digital dá-te um editor, um centro de ajuda e um período de teste gratuito. Nós não — criamo-la, integramo-la no teu site e sentamo-nos com a tua equipa para lhe explicar tudo.",
       "home.diff.p1": "Criamos a tua ementa a partir do que tiveres — PDF, foto, documento.",
       "home.diff.p2": "Desenhamo-la a condizer com a tua marca e o teu espaço.",
       "home.diff.p3": "Integramo-la nós próprios no teu site atual.",
@@ -1482,7 +1482,7 @@
       "home.proof.stat2_unit": "segundos",
 
       // ---- home: pricing teaser ----
-      "home.price.eyebrow": "Preços, com clareza",
+      "home.price.eyebrow": "Preços",
       "home.price.title": "Um pagamento único de configuração e depois uma mensalidade fixa.",
       "home.price.body": "Alojamento, apoio e atualizações incluídos. Sem custos por cliente, sem custos por prato, sem faturas surpresa.",
       "home.price.see_full": "Ver todos os preços →",
@@ -1490,12 +1490,12 @@
 
       // ---- home: closing CTA ----
       "home.cta.eyebrow": "Quando quiseres",
-      "home.cta.title": "Vamos pôr a tua ementa <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">online</em>.",
-      "home.cta.body": "Uma demo de 20 minutos. Mostramos-te o painel, percorremos configurações reais e respondemos a tudo. Sem compromisso.",
+      "home.cta.title": "Vamos pôr a tua ementa online.",
+      "home.cta.body": "Uma demo de 20 minutos. Mostramos-te o painel, percorremos configurações reais e respondemos às tuas perguntas. Sem compromisso.",
 
       // ---- features: intro ----
       "features.eyebrow": "Funcionalidades",
-      "features.title": "Tudo o que precisas para gerir a tua ementa. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Nada a mais.</em>",
+      "features.title": "Tudo o que precisas para gerir a tua ementa. Nada a mais.",
       "features.intro": "Quatro partes na Dimonova: a ementa digital que os teus clientes veem, o painel a partir do qual a tua equipa a gere, as análises que te dizem o que funciona e a integração chave na mão que põe tudo online.",
 
       // ---- features: 1 digital menu ----
@@ -1542,7 +1542,7 @@
 
       // ---- features: 4 onboarding ----
       "features.f4.eyebrow": "04 · Integração chave na mão",
-      "features.f4.title": "A parte que mais ninguém faz. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#D69B7F\">Fazemo-la por ti.</em>",
+      "features.f4.title": "A parte que mais ninguém faz. Fazemo-la por ti.",
       "features.f4.c1_title": "Montagem da ementa",
       "features.f4.c1_body": "Envia-nos a tua ementa no formato que tiveres. Transcrevemo-la, estruturamo-la, organizamo-la por secções, acrescentamos os alergénios e verificamos cada prato contigo antes de ficar online.",
       "features.f4.c2_title": "Design de marca",
@@ -1560,7 +1560,7 @@
 
       // ---- pricing: intro ----
       "pricing.eyebrow": "Preços",
-      "pricing.title": "Dois pagamentos. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Sem surpresas.</em>",
+      "pricing.title": "Dois pagamentos. Sem surpresas.",
       "pricing.intro": "Um pagamento único de configuração cobre a montagem, o design, a integração no site e a formação da equipa. Depois, uma mensalidade fixa cobre o alojamento, o apoio e as atualizações.",
 
       // ---- pricing: setup card ----
@@ -1641,7 +1641,7 @@
 
       // ---- about: intro ----
       "about.eyebrow": "Sobre nós",
-      "about.title": "Uma equipa pequena. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">Uma tarefa específica.</em>",
+      "about.title": "Uma equipa pequena. Uma tarefa específica.",
       "about.intro": "A Dimonova existe porque a ementa — a página mais lida do site de qualquer restaurante — era tratada como algo secundário. Nós criamo-la, gerimo-la e cuidamos dela por ti.",
 
       // ---- about: why we exist ----
