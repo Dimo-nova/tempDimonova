@@ -12,6 +12,22 @@
   // lang code -> flagcdn country code for the flag image
   var LANG_FLAGS = { en: "gb", es: "es", de: "de", fr: "fr", pt: "pt" };
 
+  // Localised product screenshots in assets/. Files are named
+  // <LANG_FILE[code]>_<base>.png. IMG_LANGS lists which languages actually
+  // have a screenshot for each base; anything missing falls back to English.
+  var LANG_FILE = { en: "english", es: "spanish", de: "german", fr: "french", pt: "portuguese" };
+  var IMG_LANGS = {
+    hero: ["en", "es", "de", "fr"],
+    features: ["en", "es", "de", "fr"],
+    dishes: ["en", "es", "de", "fr", "pt"],
+    manager_data: ["en", "es", "de", "fr", "pt"],
+  };
+  function imgSrc(base, code) {
+    var langs = IMG_LANGS[base] || ["en"];
+    var lang = langs.indexOf(code) >= 0 ? code : "en";
+    return "assets/" + LANG_FILE[lang] + "_" + base + ".png";
+  }
+
   function storedLang() {
     try { return localStorage.getItem("lang") || "en"; } catch (e) { return "en"; }
   }
@@ -76,6 +92,9 @@
     document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
       var v = val(el.getAttribute("data-i18n-placeholder"));
       if (v != null) el.setAttribute("placeholder", v);
+    });
+    document.querySelectorAll("[data-i18n-img]").forEach(function (el) {
+      el.setAttribute("src", imgSrc(el.getAttribute("data-i18n-img"), code));
     });
   }
 

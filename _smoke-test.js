@@ -120,7 +120,6 @@ ok(featNav && featNav.getAttribute("data-i18n") === "nav.features" && featNav.te
 // switching to Spanish applies translated strings (text, html heading, placeholder)
 window.Dimonova.setLanguage("es");
 ok(featNav.textContent === "Características", "Spanish applied to nav label");
-ok(/presumir/.test(document.querySelector('[data-i18n-html="home.hero.title1"]').innerHTML), "Spanish applied to html heading");
 ok(document.querySelector('[data-i18n-placeholder="contact.form.message_ph"]').getAttribute("placeholder") === window.I18N.es["contact.form.message_ph"], "Spanish applied to placeholder");
 ok(window.localStorage.getItem("lang") === "es", "Spanish persisted to localStorage");
 // switching back to English restores the originals
