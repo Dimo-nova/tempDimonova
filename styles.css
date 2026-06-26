@@ -16,15 +16,13 @@
   .dim-pop{animation:dimRise .25s ease both}
   @media (max-width:900px){
     .dim-hero-grid{grid-template-columns:1fr!important}
-    .dim-hero-visual{max-width:380px;margin:0 auto}
+    .dim-hero-visual{height:520px!important;max-width:380px;margin:0 auto}
     .dim-hide-md{display:none!important}
     .dim-show-md{display:flex!important}
     .dim-pad-h{padding-left:24px!important;padding-right:24px!important}
     .dim-h1{font-size:42px!important;line-height:1.05!important}
     .dim-h1-accent{font-size:46px!important}
     .dim-h2{font-size:30px!important;line-height:1.1!important}
-    .dim-f2-visual{order:2}
-    .dim-f2-text{order:1}
     .dim-stack-md{grid-template-columns:1fr!important}
     .dim-stack4-md{grid-template-columns:1fr 1fr!important}
     .dim-footer-grid{grid-template-columns:1fr 1fr!important}
