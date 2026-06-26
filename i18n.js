@@ -97,8 +97,8 @@
       "home.proof.role": "Role · Venue name",
       "home.proof.stat1_label": "Average go-live",
       "home.proof.stat1_unit": "days",
-      "home.proof.stat2_label": "Time to edit a dish",
-      "home.proof.stat2_unit": "seconds",
+      "home.proof.stat2_label": "Satisfaction rate",
+      "home.proof.stat2_unit": "",
 
       // ---- home: pricing teaser ----
       "home.price.eyebrow": "Pricing",
@@ -170,8 +170,6 @@
       "features.f4.c3_body": "Embedded directly into your existing website by us. Squarespace, Wix, WordPress, custom build — we handle it. Your menu lives at yourvenue.com/menu, not on someone else's domain.",
       "features.f4.c4_title": "Team training",
       "features.f4.c4_body": "A single 30-minute session with whoever will run the dashboard — usually the owner and the floor manager. We screen-share, you take notes. After that, you're independent.",
-      "features.f4.quote": "\"You bought software. We're handing you a working menu.\"",
-      "features.f4.promise": "Our promise · in five to seven days, you're live",
 
       // ---- features: CTA ----
       "features.cta.title": "See it on your menu, not ours.",
@@ -437,8 +435,8 @@
       "home.proof.role": "Cargo · Nombre del local",
       "home.proof.stat1_label": "Puesta en marcha media",
       "home.proof.stat1_unit": "días",
-      "home.proof.stat2_label": "Tiempo para editar un plato",
-      "home.proof.stat2_unit": "segundos",
+      "home.proof.stat2_label": "Tasa de satisfacción",
+      "home.proof.stat2_unit": "",
 
       // ---- home: pricing teaser ----
       "home.price.eyebrow": "Precios",
@@ -510,8 +508,7 @@
       "features.f4.c3_body": "La integramos nosotros directamente en tu web actual. Squarespace, Wix, WordPress, desarrollo a medida — nos encargamos. Tu carta vive en tulocal.com/carta, no en el dominio de otro.",
       "features.f4.c4_title": "Formación del equipo",
       "features.f4.c4_body": "Una única sesión de 30 minutos con quien vaya a gestionar el panel — normalmente el dueño y el encargado de sala. Compartimos pantalla, tú tomas notas. Después, eres independiente.",
-      "features.f4.quote": "«Compraste software. Te entregamos una carta lista para usar.»",
-      "features.f4.promise": "Nuestra promesa · en cinco a siete días, estás en línea",
+
 
       // ---- features: CTA ----
       "features.cta.title": "Míralo en tu carta, no en la nuestra.",
@@ -777,8 +774,8 @@
       "home.proof.role": "Rolle · Name des Lokals",
       "home.proof.stat1_label": "Durchschnittlicher Go-live",
       "home.proof.stat1_unit": "Tage",
-      "home.proof.stat2_label": "Zeit, ein Gericht zu ändern",
-      "home.proof.stat2_unit": "Sekunden",
+      "home.proof.stat2_label": "Zufriedenheitsrate",
+      "home.proof.stat2_unit": "",
 
       // ---- home: pricing teaser ----
       "home.price.eyebrow": "Preise",
@@ -850,8 +847,7 @@
       "features.f4.c3_body": "Von uns direkt in deine bestehende Website eingebunden. Squarespace, Wix, WordPress, Eigenentwicklung — wir kümmern uns. Deine Karte lebt unter deinlokal.de/karte, nicht auf der Domain eines anderen.",
       "features.f4.c4_title": "Team-Schulung",
       "features.f4.c4_body": "Eine einzige 30-minütige Sitzung mit allen, die das Dashboard führen — meist Inhaber und Serviceleitung. Wir teilen den Bildschirm, du machst dir Notizen. Danach bist du eigenständig.",
-      "features.f4.quote": "„Du hast Software gekauft. Wir übergeben dir eine fertige Karte.“",
-      "features.f4.promise": "Unser Versprechen · in fünf bis sieben Tagen bist du live",
+
 
       // ---- features: CTA ----
       "features.cta.title": "Sieh es auf deiner Karte, nicht auf unserer.",
@@ -1117,8 +1113,8 @@
       "home.proof.role": "Fonction · Nom de l'établissement",
       "home.proof.stat1_label": "Mise en ligne moyenne",
       "home.proof.stat1_unit": "jours",
-      "home.proof.stat2_label": "Temps pour modifier un plat",
-      "home.proof.stat2_unit": "secondes",
+      "home.proof.stat2_label": "Taux de satisfaction",
+      "home.proof.stat2_unit": "",
 
       // ---- home: pricing teaser ----
       "home.price.eyebrow": "Tarifs",
@@ -1190,8 +1186,7 @@
       "features.f4.c3_body": "Intégrée directement à ton site existant par nos soins. Squarespace, Wix, WordPress, développement sur mesure — on gère. Ta carte vit sur tonetablissement.fr/carte, pas sur le domaine d'un autre.",
       "features.f4.c4_title": "Formation de l'équipe",
       "features.f4.c4_body": "Une seule session de 30 minutes avec ceux qui gèreront le tableau de bord — en général le propriétaire et le responsable de salle. Nous partageons l'écran, tu prends des notes. Ensuite, tu es autonome.",
-      "features.f4.quote": "« Tu as acheté un logiciel. On te remet une carte prête à l'emploi. »",
-      "features.f4.promise": "Notre promesse · en cinq à sept jours, tu es en ligne",
+
 
       // ---- features: CTA ----
       "features.cta.title": "Vois-le sur ta carte, pas la nôtre.",
@@ -1456,8 +1451,8 @@
       "home.proof.role": "Cargo · Nome do espaço",
       "home.proof.stat1_label": "Entrada online média",
       "home.proof.stat1_unit": "dias",
-      "home.proof.stat2_label": "Tempo para editar um prato",
-      "home.proof.stat2_unit": "segundos",
+      "home.proof.stat2_label": "Taxa de satisfação",
+      "home.proof.stat2_unit": "",
 
       // ---- home: pricing teaser ----
       "home.price.eyebrow": "Preços",
@@ -1529,8 +1524,7 @@
       "features.f4.c3_body": "Integrada diretamente no teu site atual por nós. Squarespace, Wix, WordPress, desenvolvimento à medida — tratamos disso. A tua ementa vive em oteuespaco.pt/ementa, não no domínio de outra pessoa.",
       "features.f4.c4_title": "Formação da equipa",
       "features.f4.c4_body": "Uma única sessão de 30 minutos com quem vai gerir o painel — normalmente o dono e o responsável de sala. Partilhamos o ecrã, tu tomas notas. Depois disso, ficas autónomo.",
-      "features.f4.quote": "«Compraste software. Entregamos-te uma ementa pronta a usar.»",
-      "features.f4.promise": "A nossa promessa · em cinco a sete dias, estás online",
+
 
       // ---- features: CTA ----
       "features.cta.title": "Vê-o na tua ementa, não na nossa.",
