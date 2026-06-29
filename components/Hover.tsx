@@ -35,7 +35,7 @@ export default function Hover({
       onFocus={() => focus && setActive(true)}
       onBlur={() => setActive(false)}
     >
-      {children as React.ReactNode}
+      {children}
     </Tag>
   );
 }
