@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/routing";
 import { s } from "@/lib/style";
 import OpenWAButton from "@/components/OpenWAButton";
+import { CONTACT } from "@/lib/config";
 
 export default async function Footer() {
   const t = await getTranslations();
@@ -116,9 +117,9 @@ export default async function Footer() {
                 "display:flex;flex-direction:column;gap:12px;font:400 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0"
               )}
             >
-              <div>pablo@dimonova.com</div>
-              <div>+353 085 268 0856</div>
-              <div>+34 622 040 285</div>
+              <div>{CONTACT.email}</div>
+              <div>{CONTACT.phoneIE}</div>
+              <div>{CONTACT.phoneES}</div>
             </div>
           </div>
         </div>

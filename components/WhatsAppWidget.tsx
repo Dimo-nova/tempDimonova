@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { s } from "@/lib/style";
 import Hover from "./Hover";
+import { CONTACT } from "@/lib/config";
 
 export default function WhatsAppWidget() {
   const t = useTranslations();
@@ -114,7 +115,7 @@ export default function WhatsAppWidget() {
           >
             <Hover
               as="a"
-              href="https://wa.me/34622040285"
+              href={CONTACT.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               base="width:100%;background:#25D366;color:#FAF6F0;font:600 13px/1 'Instrument Sans',sans-serif;padding:12px 16px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none"

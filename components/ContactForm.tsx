@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { s } from "@/lib/style";
 import Hover from "./Hover";
+import { CONTACT } from "@/lib/config";
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -314,17 +315,17 @@ export default function ContactForm() {
             <div style={s("display:flex;flex-direction:column;gap:14px")}>
               <div>
                 <div style={s("font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:4px")}>{t("contact.side.email_label")}</div>
-                <div style={s("font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814")}>pablo@dimonova.com</div>
+                <div style={s("font:500 16px/1 'Instrument Sans',sans-serif;color:#1F1814")}>{CONTACT.email}</div>
               </div>
               <div>
                 <div style={s("font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:6px")}>{t("contact.side.phone_calls_label")}</div>
                 <div style={s("display:flex;flex-direction:column;gap:5px")}>
                   <a href="tel:+353852680856" style={s("font:500 15px/1.3 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:none")}>
-                    +353 085 268 0856{" "}
+                    {CONTACT.phoneIE}{" "}
                     <span style={s("font:400 12px/1 'Instrument Sans',sans-serif;color:#8A7E70")}>{t("contact.side.phone_lang_en")}</span>
                   </a>
                   <a href="tel:+34622040285" style={s("font:500 15px/1.3 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:none")}>
-                    +34 622 040 285{" "}
+                    {CONTACT.phoneES}{" "}
                     <span style={s("font:400 12px/1 'Instrument Sans',sans-serif;color:#8A7E70")}>{t("contact.side.phone_lang_es")}</span>
                   </a>
                 </div>
@@ -332,8 +333,8 @@ export default function ContactForm() {
               <div>
                 <div style={s("font:500 11px/1 'Instrument Sans',sans-serif;color:#8A7E70;margin-bottom:6px")}>WhatsApp</div>
                 <div style={s("display:flex;flex-direction:column;gap:5px")}>
-                  <a href="https://wa.me/34622040285" target="_blank" rel="noopener noreferrer" style={s("font:500 15px/1.3 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:none")}>
-                    +34 622 040 285{" "}
+                  <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener noreferrer" style={s("font:500 15px/1.3 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:none")}>
+                    {CONTACT.phoneES}{" "}
                     <span style={s("font:400 12px/1 'Instrument Sans',sans-serif;color:#8A7E70")}>· Pablo</span>
                   </a>
                   <a href="https://wa.me/34655556622" target="_blank" rel="noopener noreferrer" style={s("font:500 15px/1.3 'Instrument Sans',sans-serif;color:#1F1814;text-decoration:none")}>

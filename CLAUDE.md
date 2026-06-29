@@ -113,6 +113,19 @@ Playwright e2e lives in `e2e/`. The suite covers:
 - Translated SEO copy (`meta.title.*`, `meta.description.*`) in `messages/` is
   currently in English for all locales — proper translations are a follow-up task.
 
+### `t.raw()` and `dangerouslySetInnerHTML`
+
+Several components render translation keys with embedded HTML via
+`dangerouslySetInnerHTML={{ __html: t.raw("key") }}`. These keys contain
+trusted markup (`<strong>`, `<em>`, `<span>`) copied from the original design.
+Never put user-supplied data into a `t.raw()` key.
+
+### Contact details
+
+Hardcoded contact details (email, phone numbers, WhatsApp URL) live in
+`lib/config.ts` and are imported from `@/lib/config`. Do not inline them in
+components.
+
 ## Deploy
 
 Static export via Vercel (zero-config):
