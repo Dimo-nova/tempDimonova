@@ -316,6 +316,32 @@
       "phone_lang_es": "· Spanisch"
     }
   },
+  "seo": {
+    "home": {
+      "title": "Dimonova — Digitale Speisekarten für Restaurants, Pubs & Cafés",
+      "desc": "Wir bauen, gestalten und richten deine digitale Speisekarte ein. Du änderst ein Gericht in zwei Taps. Ein rundum-sorglos-Service für unabhängige Lokale."
+    },
+    "features": {
+      "title": "Funktionen — Dimonova",
+      "desc": "Eine gebrandete digitale Speisekarte, ein einfaches Dashboard, echte Analysen und vollständiges Onboarding. Alles was dein Lokal braucht."
+    },
+    "pricing": {
+      "title": "Preise — Dimonova",
+      "desc": "Eine einmalige Einrichtungsgebühr, dann ein festes Monatsabo. Hosting, Support und Updates inklusive."
+    },
+    "cases": {
+      "title": "Fallstudien — Dimonova",
+      "desc": "Echte Lokale, echte Speisekarten, echte Ergebnisse. Wie Restaurants, Pubs und Cafés Dimonova nutzen."
+    },
+    "about": {
+      "title": "Über uns — Dimonova",
+      "desc": "Ein kleines Team mit einem klaren Auftrag: digitale Speisekarten für Lokale bauen und betreiben, die ihr Essen ernst nehmen."
+    },
+    "contact": {
+      "title": "Kontakt & Demo — Dimonova",
+      "desc": "Buche eine 20-minütige Demo. Wir zeigen dir das Dashboard, gehen echte Setups durch und beantworten deine Fragen. Keine Verpflichtung."
+    }
+  },
   "errors": {
     "name": "Dein Name ist erforderlich.",
     "email_required": "E-Mail ist erforderlich.",

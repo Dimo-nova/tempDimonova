@@ -316,6 +316,32 @@
       "phone_lang_es": "· Spanish"
     }
   },
+  "seo": {
+    "home": {
+      "title": "Dimonova — Digital menus for restaurants, pubs & cafés",
+      "desc": "We build, style, and set up your digital menu. You change a dish in two taps. A done-for-you service for independent venues."
+    },
+    "features": {
+      "title": "Features — Dimonova",
+      "desc": "A branded digital menu, an easy dashboard, real analytics, and done-for-you onboarding. Everything your venue needs, nothing you don't."
+    },
+    "pricing": {
+      "title": "Pricing — Dimonova",
+      "desc": "A one-time setup fee, then a flat monthly subscription. Hosting, support, and updates included. Get a tailored quote for your venue."
+    },
+    "cases": {
+      "title": "Case studies — Dimonova",
+      "desc": "Real venues, real menus, real results. See how independent restaurants, pubs, and cafés use Dimonova to manage their digital menus."
+    },
+    "about": {
+      "title": "About — Dimonova",
+      "desc": "A small team with a specific job: building and running digital menus for venues that take their food seriously."
+    },
+    "contact": {
+      "title": "Contact & demo — Dimonova",
+      "desc": "Book a 20-minute demo. We'll show you the dashboard, walk through real venue setups, and answer your questions. No commitment."
+    }
+  },
   "errors": {
     "name": "Your name is required.",
     "email_required": "Email is required.",

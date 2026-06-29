@@ -316,6 +316,32 @@
       "phone_lang_es": "· Espanhol"
     }
   },
+  "seo": {
+    "home": {
+      "title": "Dimonova — Menus digitais para restaurantes, pubs & cafés",
+      "desc": "Construímos, estilizamos e configuramos o teu menu digital. Alteras um prato em dois toques. Um serviço completo para estabelecimentos independentes."
+    },
+    "features": {
+      "title": "Funcionalidades — Dimonova",
+      "desc": "Um menu digital com a tua marca, um painel fácil de usar, analíticas reais e onboarding completo. Tudo o que o teu espaço precisa."
+    },
+    "pricing": {
+      "title": "Preços — Dimonova",
+      "desc": "Uma taxa de configuração única e depois uma subscrição mensal fixa. Alojamento, suporte e atualizações incluídos."
+    },
+    "cases": {
+      "title": "Casos de estudo — Dimonova",
+      "desc": "Espaços reais, menus reais, resultados reais. Como restaurantes, pubs e cafés independentes usam o Dimonova."
+    },
+    "about": {
+      "title": "Sobre nós — Dimonova",
+      "desc": "Uma equipa pequena com uma missão específica: criar e gerir menus digitais para espaços que levam a sua cozinha a sério."
+    },
+    "contact": {
+      "title": "Contacto & demo — Dimonova",
+      "desc": "Reserva uma demo de 20 minutos. Mostramos-te o painel, percorremos configurações reais e respondemos às tuas perguntas. Sem compromisso."
+    }
+  },
   "errors": {
     "name": "O teu nome é obrigatório.",
     "email_required": "O e-mail é obrigatório.",
