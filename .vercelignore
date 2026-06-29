@@ -1,7 +1,7 @@
-# Only the static site (index.html, styles.css, app.js) is deployed.
-# Source/build/test artifacts are excluded.
-_design_source.html
-_build.js
-_smoke-test.js
-node_modules
-README.md
+archive/
+.superpowers/
+docs/
+e2e/
+playwright.config.ts
+playwright.unit.config.ts
+scripts/

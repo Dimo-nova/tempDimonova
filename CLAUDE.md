@@ -4,116 +4,118 @@ Guidance for Claude (and other agents) working in this repo.
 
 ## What this is
 
-A **static marketing site** for Dimonova — a done-for-you digital-menu service
-for restaurants, pubs and cafés. It was generated from a Claude Design export
-and implemented as plain HTML/CSS/JS. No framework, no build step required to
-run or deploy.
+A **marketing site** for Dimonova — a done-for-you digital-menu service for
+restaurants, pubs and cafés. It is built with **Next.js 16, TypeScript, App
+Router, and SSG** (static site generation). All routes are statically rendered
+at build time.
 
 **Open tasks live in [`TODO.md`](./TODO.md)** — check it before starting work and
 keep it updated. Human-facing overview is in [`README.md`](./README.md).
 
 ## Architecture
 
-It's a single-page app that switches between six "pages" using the URL hash.
-There is no router library and no server — everything is client-side.
+| Layer | Detail |
+|-------|--------|
+| Framework | Next.js 16 — App Router, `generateStaticParams`, `generateMetadata` |
+| Language | TypeScript (strict) |
+| i18n | `next-intl` · 5 locales: `en`, `es`, `de`, `fr`, `pt` · `localePrefix: "as-needed"` (English at `/`, others at `/es/`, `/de/`, etc.) |
+| Styling | Inline styles throughout (copied verbatim from the Claude Design export). `lib/style.ts` exports `s(css)` which parses a CSS string into `React.CSSProperties`. Global keyframes, media queries and `.dim-*` utility classes live in `app/globals.css`. |
+| Hover/focus | `components/Hover.tsx` — a client component that applies extra inline styles on `mouseenter`/`focus` and restores them on leave/blur (mirrors the `data-hover`/`data-focus` pattern from the old `app.js`). |
+| Routing helpers | `lib/routing.ts` — calls `createNavigation(routing)` and re-exports `Link`, `useRouter`, `usePathname`, `getPathname` from `next-intl/navigation`. Always import these wrappers, not the `next/navigation` originals. |
+| SEO helpers | `lib/meta.ts` — `pageMetadata(locale, path, titleKey, descKey)` returns a `Metadata` object with canonical URL, `alternates.languages` (hreflang), and OpenGraph fields. |
+| Image helper | `lib/imgSrc.ts` — `imgSrc(base, locale)` returns a locale-specific screenshot path (falls back to the `en` asset). |
 
-| File | Role | Hand-written? |
-|------|------|---------------|
-| `index.html` | All six pages as sibling sections, header, footer, WhatsApp widget. | Generated |
-| `styles.css` | Design CSS (fonts, keyframes, responsive `@media` rules) + runtime helpers. | Generated |
-| `app.js` | The client runtime / state machine. | **Hand-written** |
-| `_design_source.html` | The original Claude Design export (the source of truth for markup). | Source |
-| `_build.js` | Transforms `_design_source.html` → `index.html` + `styles.css`. | Hand-written |
-| `_smoke-test.js` | jsdom test of the runtime behaviour. | Hand-written |
+### Route map
 
-### The six pages
-
-`home`, `features`, `pricing`, `cases`, `about`, `contact` — selected by hash
-(`#home` … `#contact`). Each is wrapped in `<div class="sc-if" data-if="isHome">`
-etc. `app.js` shows exactly one at a time.
-
-## How the build works (important)
-
-`index.html` and `styles.css` are **generated** — do not hand-edit them for
-structural/content changes that should persist. Edit `_design_source.html` (or
-the design in Claude Design) and re-run the build:
-
-```bash
-npm run build      # node _build.js
+```
+app/
+  layout.tsx              # root layout (Viewport + global Metadata, no <html>)
+  globals.css             # keyframes, media queries, .dim-* classes
+  [locale]/
+    layout.tsx            # sets <html lang>, wraps NextIntlClientProvider
+    page.tsx              # home
+    features/page.tsx
+    pricing/page.tsx
+    cases/page.tsx
+    about/page.tsx
+    contact/page.tsx
 ```
 
-`_build.js` converts the Claude Design template syntax into plain HTML that
-`app.js` understands:
+### Messages / translations
 
-| Design syntax | Becomes | Driven by |
-|---------------|---------|-----------|
-| `<sc-if value="{{ X }}">…</sc-if>` | `<div class="sc-if" data-if="X">…</div>` | `app.js` toggles `hidden` |
-| `onClick="{{ navFeatures }}"` | `data-nav="features"` | click delegation |
-| `onClick="{{ toggleWA }}"` | `data-action="toggle-wa"` | click delegation |
-| `onClick="{{ pickPub }}"` | `data-vtype="pub"` | click delegation |
-| `onChange="{{ setName }}"` | `data-field="name"` | read on submit |
-| `onSubmit="{{ submitForm }}"` | `data-action="submit-form"` | submit delegation |
-| `style-hover="…"` | `data-hover="…"` | hover helper in `app.js` |
-| `style-focus="…"` | `data-focus="…"` | focus helper in `app.js` |
-| `{{ headerBg }}`, `{{ …LinkColor }}`, pill/border bindings | static default values | recomputed by `app.js` |
+`messages/<locale>.json` holds all copy. Keys used by every page live at the
+top level; page-specific keys are nested under the page name. Use
+`getTranslations({ locale })` (server) or `useTranslations()` (client).
 
-If you add a new `{{ binding }}` or `<sc-if>` in the design, `_build.js` will
-**fail loudly** on any unhandled `{{ … }}` token — add a matching rule there
-and a matching case in `app.js`'s `computeIf()` / render logic.
+For HTML content (e.g. a paragraph with a `<br>`) use `t.raw(key)` and
+`dangerouslySetInnerHTML`. For arrays (feature lists, FAQ items) use
+`t.raw(key)` and cast to `string[]`.
 
-### `app.js` mirrors the original `DCLogic`
+### Inline-style rule
 
-`app.js` is a faithful re-implementation of the design's `DCLogic` component
-(originally at the bottom of `_design_source.html`). Key pieces:
+Styles are **never** in CSS classes — they are copied verbatim from
+`archive/_design_source.html` as template-literal strings and passed through
+`s(css)`. When porting new markup, copy the `style="…"` attribute value
+exactly and wrap it: `style={s("…")}`.
 
-- `state` — `page, scrolled, mobileNav, waOpen, vtype, submitted, errors`.
-- `computeIf(name)` — evaluates each `data-if` condition (mirrors `renderVals`).
-- `render()` — toggles `.sc-if` visibility, fills error text, sets header
-  bg/shadow on scroll, recolours the active nav link, styles the venue pills,
-  replays the page-enter animation.
-- `readHash()` / `navigate()` — hash routing; resets `mobileNav`, `submitted`,
-  `errors` on navigation and scrolls to top (matches the original).
-- `submitForm()` — same validation rules as the source (name/venue required,
-  email required + regex). Front-end only; see `TODO.md` to wire up sending.
-- Event handling is **delegated** on `document` (`click`, `submit`, `input`) —
-  generated markup carries `data-*` hooks, so no per-element wiring.
-- `bindStateStyles()` — replaces `style-hover`/`style-focus` by applying the
-  extra styles on `mouseenter`/`focus` and restoring on leave/blur.
+### WhatsApp widget state
 
-If you edit `app.js` by hand, keep it framework-free vanilla JS and re-run the
-test.
+The WA panel (`waOpen` boolean) is managed in the `[locale]/layout.tsx` via a
+client wrapper component (`components/WAWidget.tsx` or similar). It toggles on
+the FAB click and on the "Continue" button. The "Continue" button links to
+`https://wa.me/<number>`.
+
+## Archive
+
+`archive/` holds the original static HTML/CSS/JS site. It is the **source of
+truth** for markup, inline styles, exact copy, animation values, and
+scroll-header colours. When you need to verify a pixel-level detail, read the
+archive:
+
+- `archive/_design_source.html` — original Claude Design export
+- `archive/app.js` — original state machine (scroll colours, pill styles, email regex, etc.)
+- `archive/index.html` / `archive/styles.css` — built output
+
+`archive/` is excluded from the Vercel deploy.
+
+## Commands
+
+```bash
+npm run dev        # dev server on http://localhost:3000
+npm run build      # production build (static export)
+npm run test:e2e   # Playwright e2e on port 3100 (starts the server automatically)
+```
 
 ## Testing
 
-```bash
-npm install        # jsdom (devDependency)
-npm test           # node _smoke-test.js — 24 assertions, must stay green
-```
+Playwright e2e lives in `e2e/`. The suite covers:
 
-The test exercises routing, page visibility, the WhatsApp toggle, mobile nav,
-venue pills, and the full form-validation flow. **Add an assertion when you add
-behaviour.** Note: jsdom doesn't auto-fire `hashchange` on programmatic hash
-changes or do implicit form submission, so the test fires those events
-explicitly — real browsers do them natively.
+- All six routes in English and one locale (ES)
+- Header scroll behaviour, mobile nav, WhatsApp widget
+- Venue pill selection (contact page)
+- Full contact-form validation flow
+
+**Add a spec when you add behaviour.**
+
+## SEO / metadata
+
+- `app/layout.tsx` exports `viewport: Viewport` (`themeColor`) and base `metadata`.
+- Each page's `generateMetadata` calls `pageMetadata(locale, "/path", titleKey, descKey)`.
+- `sitemap.ts` and `robots.ts` live under `app/`.
+- Favicons live in `public/` (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`).
 
 ## Conventions / gotchas
 
-- **Styling is inline** on elements (copied verbatim from the design) — match
-  that style when editing markup in `_design_source.html`. Shared rules
-  (keyframes, responsive breakpoints, `.dim-*` classes) live in the `<style>`
-  block of `_design_source.html`, which the build copies into `styles.css`.
-- Files prefixed with `_` are **source/build/test artifacts**, excluded from the
-  Vercel deploy via `.vercelignore`. Only `index.html`, `styles.css`, `app.js`
-  ship.
-- Navigation uses `<button>` elements (from the design), not `<a>` — see the
-  accessibility item in `TODO.md`.
+- **Do not** hand-edit files under `archive/` — they are the historical source of truth only.
+- **Do not** use `next/navigation` directly — use the wrappers in `lib/routing.ts`.
 - Content marked "placeholder" is intentional. Don't invent real names, quotes,
-  metrics, or photos — leave placeholders until real content is supplied
-  (tracked in `TODO.md`).
+  metrics, or photos — leave placeholders until real content is supplied (tracked in `TODO.md`).
+- Translated SEO copy (`meta.title.*`, `meta.description.*`) in `messages/` is
+  currently in English for all locales — proper translations are a follow-up task.
 
 ## Deploy
 
-Static, zero-config on Vercel:
+Static export via Vercel (zero-config):
 
 ```bash
 vercel             # preview
