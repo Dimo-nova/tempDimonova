@@ -4,12 +4,24 @@
   "private": true,
   "description": "Dimonova marketing site — digital menus for restaurants, pubs & cafés.",
   "scripts": {
-    "dev": "npx serve .",
-    "start": "npx serve .",
-    "build": "node _build.js",
-    "test": "node _smoke-test.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
-    "jsdom": "^23.2.0"
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "^23.2.0",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "next": "^16.2.9",
+    "next-intl": "^4.13.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   }
 }

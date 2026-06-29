@@ -2,3 +2,9 @@ node_modules/
 *.log
 .DS_Store
 .claude/
+/.next/
+/node_modules
+/out/
+next-env.d.ts
+/test-results/
+/playwright-report/
