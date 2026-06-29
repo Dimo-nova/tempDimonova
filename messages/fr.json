@@ -1,0 +1,342 @@
+{
+  "nav": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "cases": "Études de cas",
+    "about": "À propos",
+    "contact": "Contact",
+    "home": "Accueil",
+    "whatsapp": "WhatsApp",
+    "demo": "Demander une démo"
+  },
+  "common": {
+    "chat_wa": "Discuter sur WhatsApp",
+    "demo": "Demander une démo",
+    "demo_arrow": "Demander une démo →"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Pour les restaurants, pubs et cafés",
+      "title1": "Une carte numérique,",
+      "title2": "conçue et installée pour toi.",
+      "body": "Nous créons ta carte numérique, l'adaptons à ta marque, l'intégrons à ton site existant et formons ton équipe. Tu modifies un plat en deux tapotements.",
+      "avatars": "Adoptée par des établissements indépendants<br>dans tout le pays"
+    },
+    "viz": {
+      "dash_label": "Tableau de bord · en direct",
+      "dash_title": "Favoris de la semaine",
+      "days": "Lun — Dim",
+      "menu_views": "Vues de la carte",
+      "updates": "Modifications cette semaine"
+    },
+    "logos": {
+      "label": "La confiance d'établissements indépendants",
+      "placeholder": "logo de l'établissement"
+    },
+    "feat": {
+      "eyebrow": "Ce que tu obtiens",
+      "title": "Conçue autour de ta carte et ta marque, pas un modèle unique pour tous.",
+      "see_all": "Voir toutes les fonctionnalités →",
+      "c1_title": "Une carte numérique, bien conçue",
+      "c1_body": "Photos, descriptions, allergènes, prix — disposés pour que les clients les lisent vraiment.",
+      "c2_title": "Un tableau de bord que tu gères depuis le bar",
+      "c2_body": "Modifier un plat, changer une photo, marquer quelque chose en rupture — depuis n'importe quel téléphone ou ordinateur, en quelques secondes.",
+      "c3_title": "Vois ce que tes clients veulent vraiment",
+      "c3_body": "Popularité des plats, vues et tendances — pour que ta prochaine carte repose sur des données, pas sur des suppositions."
+    },
+    "how": {
+      "eyebrow": "Comment ça marche",
+      "title": "Nous la configurons. Tu la gères.",
+      "s1_title": "Envoie-nous ta carte",
+      "s1_body": "Un PDF, une photo de l'ardoise, un document Word — ce que tu as. On s'occupe du reste.",
+      "s2_title": "Nous la créons et la mettons en forme",
+      "s2_body": "Adaptée à ta marque, ton ton, ton établissement. Commandes à table, codes promo, sections sur mesure — ce que ton restaurant a besoin, on le construit.",
+      "s3_title": "Intégration et formation",
+      "s3_body": "Intégrée à ton site existant. Une formation de 30 minutes avec ton équipe. Voilà la passation.",
+      "s4_title": "Tu la gères",
+      "s4_body": "Modifie un plat en 10 secondes. Vois ce qui se vend. Nous restons là quand tu as besoin de nous.",
+      "quote": "« La plupart sont en ligne 5 à 7 jours après nous avoir envoyé leur carte. La formation est la plus longue réunion qu'on te demande. »",
+      "more": "En savoir plus sur l'installation →"
+    },
+    "diff": {
+      "eyebrow": "La différence",
+      "title": "",
+      "body": "La plupart des produits de carte numérique te donnent un éditeur, un centre d'aide et un essai gratuit. Pas nous — nous la créons, l'intégrons à ton site et nous asseyons avec ton équipe pour tout lui expliquer.",
+      "p1": "Nous créons ta carte à partir de ce que tu as — PDF, photo, document.",
+      "p2": "Nous la mettons en forme pour qu'elle corresponde à ta marque et ton établissement.",
+      "p3": "Nous l'intégrons nous-mêmes à ton site existant.",
+      "p4": "Nous formons ton équipe en une seule session de 30 minutes.",
+      "card_badge": "visuel produit",
+      "card_pill": "Session d'intégration — visuel",
+      "card_title": "Installation, réglée",
+      "card_body": "Du contrat signé à la carte en ligne en quelques jours, pas semaines."
+    },
+    "proof": {
+      "quote": "Témoignage exemple — le genre de citation qui dit « on n'a plus à penser à la carte ». La vraie citation d'un client ira ici.",
+      "client": "Nom du client",
+      "role": "Fonction · Nom de l'établissement",
+      "stat1_label": "Mise en ligne moyenne",
+      "stat1_unit": "jours",
+      "stat2_label": "Taux de satisfaction",
+      "stat2_unit": ""
+    },
+    "price": {
+      "eyebrow": "Tarifs",
+      "title": "Des frais d'installation uniques, puis un abonnement mensuel fixe.",
+      "body": "Hébergement, support et mises à jour inclus. Pas de frais par couvert, pas de frais par plat, pas de factures surprises.",
+      "see_full": "Voir tous les tarifs →",
+      "quote_cta": "Demander un devis sur mesure"
+    },
+    "cta": {
+      "eyebrow": "Prêt quand tu l'es",
+      "title": "Mettons ta carte en ligne.",
+      "body": "Une démo de 20 minutes. On te montre le tableau de bord, on parcourt de vraies installations et on répond à tes questions. Sans engagement."
+    }
+  },
+  "features": {
+    "eyebrow": "Fonctionnalités",
+    "title": "Tout ce qu'il te faut pour gérer ta carte. Rien de superflu.",
+    "intro": "Quatre éléments dans Dimonova : la carte numérique que voient tes clients, le tableau de bord depuis lequel ton équipe la gère, les analyses qui te disent ce qui fonctionne, et l'intégration clé en main qui met le tout en ligne.",
+    "f1": {
+      "eyebrow": "01 · La carte numérique",
+      "title": "Une carte qui ressemble à ton établissement, pas à une appli de livraison.",
+      "body": "Photos, descriptions, allergènes, prix, sections, suggestions du jour — bien composés. Se charge vite sur mobile. Vit dans ton site existant, pour que les clients ne se sentent jamais renvoyés vers un outil tiers.",
+      "p1": "<strong style=\"font-weight:600\">Intégrée, pas redirigée.</strong> Vit sur <span style=\"font-family:'Instrument Serif',serif;font-style:italic\">tonetablissement.fr/carte</span>, pas sur une URL générique.",
+      "p2": "<strong style=\"font-weight:600\">Allergènes et étiquettes alimentaires</strong> sur chaque plat, filtrables pour les clients.",
+      "p3": "<strong style=\"font-weight:600\">QR codes optionnels</strong> — cartons de table, affiches, cartes de visite — y mènent directement.",
+      "p4": "<strong style=\"font-weight:600\">Les états « en rupture »</strong> retirent un plat instantanément pendant le service."
+    },
+    "f2": {
+      "eyebrow": "02 · Le tableau de bord",
+      "title": "Si tu sais utiliser Instagram, tu sais utiliser ceci.",
+      "body": "Pas de formation d'expert en cartes, pas de tickets à l'agence, pas de « ouvre une demande de support pour changer un prix ». La personne qui gère la salle peut retirer un plat, augmenter un prix ou changer une photo depuis son téléphone en moins d'une minute.",
+      "p1": "<strong style=\"font-weight:600\">Les modifications sont en ligne instantanément</strong> — pas de file de publication, pas d'attente d'un développeur.",
+      "p2": "<strong style=\"font-weight:600\">Carte en plusieurs langues</strong> — les clients la voient automatiquement dans leur langue.",
+      "p3": "<strong style=\"font-weight:600\">Entièrement personnalisée à ta marque</strong> — couleurs, polices et ambiance conçues pour ton restaurant.",
+      "p4": "<strong style=\"font-weight:600\">Fonctionne sur tout appareil.</strong> Le téléphone du barman, l'iPad du responsable, l'ordinateur du propriétaire.",
+      "viz_menu": "Carte",
+      "viz_all": "Tous les plats",
+      "viz_starters": "Entrées",
+      "viz_mains": "Plats",
+      "viz_desserts": "Desserts",
+      "viz_drinks": "Boissons",
+      "viz_insights": "Analyses",
+      "viz_popularity": "Popularité",
+      "viz_newdish": "+ Nouveau plat",
+      "viz_soldout": "En rupture"
+    },
+    "f3": {
+      "eyebrow": "03 · Analyses",
+      "title": "La carte te donne enfin des données, pas des suppositions.",
+      "body": "Chaque vue d'un plat est enregistrée. Tu vois ce que les clients regardent, ce qu'ils sautent et ce qui les perd dès la description. Lance une suggestion brunch ; vois si quelqu'un l'a lue. Ta prochaine carte, ce sont des décisions, pas des opinions.",
+      "p1": "<strong style=\"font-weight:600\">Popularité des plats</strong> par semaine et par mois — voyez ce qui se vend et quand.",
+      "p2": "<strong style=\"font-weight:600\">Vue des plats actifs</strong> — tous vos éléments en ligne d'un coup d'œil.",
+      "p3": "<strong style=\"font-weight:600\">Catégories personnalisées</strong> — organisez les sections de votre carte à votre façon.",
+      "viz_title": "Vues — 12 dernières semaines",
+      "viz_total": "Vues totales",
+      "viz_top": "Section phare",
+      "viz_trend": "Tendance",
+      "viz_top_value": "Plats"
+    },
+    "f4": {
+      "eyebrow": "04 · Intégration clé en main",
+      "title": "La partie que personne d'autre ne fait. Nous la faisons pour toi.",
+      "c1_title": "Montage de la carte",
+      "c1_body": "Envoie-nous ta carte dans le format que tu as. Nous la saisissons, la structurons, l'organisons en sections, ajoutons les allergènes et vérifions chaque plat avec toi avant la mise en ligne.",
+      "c2_title": "Identité de marque",
+      "c2_body": "Couleurs, polices, style photo — assortis à ton établissement. La carte doit sembler appartenir à ta marque, pas à la nôtre. Nous nous inspirons de ton site et de ta signalétique existants.",
+      "c3_title": "Intégration au site",
+      "c3_body": "Intégrée directement à ton site existant par nos soins. Squarespace, Wix, WordPress, développement sur mesure — on gère. Ta carte vit sur tonetablissement.fr/carte, pas sur le domaine d'un autre.",
+      "c4_title": "Formation de l'équipe",
+      "c4_body": "Une seule session de 30 minutes avec ceux qui gèreront le tableau de bord — en général le propriétaire et le responsable de salle. Nous partageons l'écran, tu prends des notes. Ensuite, tu es autonome."
+    },
+    "cta": {
+      "title": "Vois-le sur ta carte, pas la nôtre.",
+      "body": "Réserve une démo et nous maquettons une section de ta vraie carte — sans engagement, sans diapositives."
+    }
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Des prix personnalisés pour <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">ton</em> établissement.",
+    "intro": "Parle-nous de ton établissement et nous construisons un chiffre autour de tes besoins. Voici ce qui est toujours inclus.",
+    "included": {
+      "eyebrow": "Ce qui est toujours inclus",
+      "title": "Tout ce que reçoit chaque client, quelle que soit la taille de l'établissement.",
+      "i1": "Carte structurée et construite par nos soins, à partir de ce que tu as",
+      "i2": "Mise en forme assortie à ta marque existante",
+      "i3": "Intégrée à ton site existant — sans nouveau site nécessaire",
+      "i4": "Modifications de plats, prix et sections illimitées — faites par toi, instantanément",
+      "i5": "Analyses de popularité et récap hebdomadaire",
+      "i6": "Hébergement, sécurité et mises à jour logicielles — toujours actif",
+      "i7": "Un vrai support humain — e-mail et WhatsApp",
+      "i8": "QR codes pour tables et impression (option supplémentaire)",
+      "i9": "Session d'intégration de 30 minutes en visio"
+    },
+    "shape": {
+      "eyebrow": "Ce qui détermine ton devis",
+      "intro": "Quelques éléments influencent le chiffre — nous les passons tous en revue lors de l'appel.",
+      "i1": "Nombre de plats et de sections",
+      "i2": "Photographie — les tiennes, celles de ton site, ou organisées par nous",
+      "i3": "Une carte ou plusieurs (boissons, saison, événements)",
+      "i4": "Langues — une ou plusieurs",
+      "i5": "Comment ton site actuel est construit"
+    },
+    "strip": {
+      "title": "Prêt à parler chiffres ?",
+      "body": "Parle-nous de ton établissement et nous préparons un devis lors de l'appel.",
+      "cta": "Demander un devis sur mesure →"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Y a-t-il un engagement ?",
+      "a1": "Un simple contrat de service, résiliable avec un mois de préavis. Pas d'engagement sur plusieurs années.",
+      "q2": "Et si ma carte change beaucoup ?",
+      "a2": "Modifie-la toi-même, aussi souvent que tu veux. Ton tarif mensuel ne change pas selon la fréquence des modifications.",
+      "q3": "Ai-je besoin d'un nouveau site ?",
+      "a3": "Non. Le tien reste. Nous y intégrons la carte. Squarespace, Wix, WordPress ou un développement sur mesure — tout convient.",
+      "q4": "Et les photos des plats ?",
+      "a4": "Tu peux fournir les tiennes, utiliser celles de ton site existant ou ne pas mettre de photos. Option supplémentaire : nous organisons un photographe.",
+      "q5": "Combien de temps avant la mise en ligne ?",
+      "a5": "Cinq à sept jours ouvrés après réception de ta carte, dans la plupart des cas. Nous fixerons une date lors de l'appel de démo."
+    }
+  },
+  "cases": {
+    "eyebrow": "Études de cas",
+    "title": "De vrais établissements. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">De vraies cartes.</em> De vrais résultats.",
+    "intro": "Les études de cas et témoignages sont en cours de collecte auprès de clients actuels. De vraies histoires remplaceront chacun des exemples ci-dessous au fur et à mesure de leur validation.",
+    "note": "<strong style=\"font-weight:600;color:#1F1814\">Note sur les exemples :</strong> tous les noms de clients, citations et chiffres de cette page sont des exemples. Le contenu réel viendra ici une fois fourni.",
+    "featured": {
+      "eyebrow": "À la une · Pub",
+      "quote": "« Citation exemple sur la façon dont l'équipe peut enfin mettre à jour la carte sans attendre l'agence web. »",
+      "body": "Histoire client exemple — un paragraphe décrivant l'établissement avant Dimonova, le changement après, et un résultat concret (mises à jour plus rapides, plus de vues, un plat qui les a surpris).",
+      "client": "Nom du client",
+      "role": "Fonction · Nom de l'établissement",
+      "photo_badge": "photo de l'établissement",
+      "photo_pill": "Photo de l'établissement à la une"
+    },
+    "grid": {
+      "photo": "photo de l'établissement",
+      "type_restaurant": "Restaurant",
+      "type_pub": "Pub",
+      "type_cafe": "Café",
+      "venue": "Nom de l'établissement (exemple)",
+      "summary": "Résumé en une ligne de ce qui a changé pour eux — exemple en attendant le contenu réel.",
+      "live_since": "En ligne depuis",
+      "live_value": "À définir",
+      "result": "Résultat",
+      "result_value": "exemple"
+    },
+    "cta": {
+      "title": "Tu veux être la prochaine étude de cas ?"
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Une petite équipe. Une mission précise.",
+    "intro": "Dimonova existe parce que la carte — la page la plus lue du site de tout restaurant — était traitée comme un détail. Nous la créons, la gérons et nous en occupons pour toi.",
+    "why": {
+      "eyebrow": "Pourquoi nous existons",
+      "title": "La plupart des cartes numériques sont mauvaises. Les bonnes demandent trop de travail.",
+      "p1": "Chaque restaurant a le même problème : la carte change constamment, mais le site ne le reflète jamais. Les PDF sont périmés. L'agence web a une file d'attente de deux semaines. Le produit QR code est un cauchemar à modifier. À un moment, la carte — ce que les clients veulent vraiment regarder — est devenue la partie la plus mal entretenue de la présence en ligne de l'établissement.",
+      "p2": "Nous avons créé Dimonova parce que ce problème n'est pas vraiment un problème de logiciel. C'est un problème de service. Un logiciel ne rend pas ta carte professionnelle — un designer, si. Un logiciel ne la relie pas à ton site — un développeur, si. Un logiciel ne forme pas ton équipe — une personne, si. Alors nous faisons tout cela, et le logiciel est ce qui rend l'ensemble assez abordable pour avoir du sens.",
+      "p3": "Nous travaillons avec des restaurants, des pubs et des cafés. Pas avec des chaînes — l'installation sur mesure ne passerait pas à l'échelle, et elles n'en ont pas besoin.",
+      "aside_label": "En bref",
+      "aside_quote": "« Nous créons des cartes numériques pour des lieux qui prennent leur cuisine au sérieux et ne veulent pas penser au logiciel. »",
+      "aside_sign": "L'équipe Dimonova"
+    },
+    "principles": {
+      "eyebrow": "Notre façon de travailler",
+      "title": "Trois principes, et pas beaucoup plus.",
+      "p1_title": "Faire le travail à leur place.",
+      "p1_body": "Si l'intégration coûte au client plus de 30 minutes de son temps, c'est qu'on l'a mal conçue.",
+      "p2_title": "Des prix prévisibles.",
+      "p2_body": "Mensuel fixe. Pas de frais par couvert, pas de frais par plat, pas de factures surprises les semaines chargées.",
+      "p3_title": "Leur marque, pas la nôtre.",
+      "p3_body": "La carte vit sur le domaine de l'établissement, dans son style. C'est nous qui, en coulisses, faisons en sorte que ça marche."
+    },
+    "team": {
+      "eyebrow": "L'équipe",
+      "title": "Les personnes à qui tu parleras vraiment.",
+      "portrait": "portrait",
+      "name": "Nom (exemple)",
+      "role1": "Fondateur et responsable du montage",
+      "role2": "Design et mise en forme",
+      "role3": "Relation client",
+      "role4": "Ingénierie"
+    },
+    "cta": {
+      "title": "Tu veux voir comment ça marcherait pour ton établissement ?"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parle-nous de ton établissement. <em style=\"font-family:'Instrument Serif',serif;font-style:italic;color:#B8523A\">On s'occupe du reste.</em>",
+    "intro": "Une démo dure en général 20 minutes — on te montre le tableau de bord, on parcourt de vraies installations et on te fait un devis lors de l'appel.",
+    "success": {
+      "title": "Bien reçu. On te recontacte.",
+      "body": "Attends-toi à un e-mail de notre équipe sous un jour ouvré pour fixer la démo. Si c'est urgent, écris-nous sur WhatsApp.",
+      "wa": "Écris-nous sur WhatsApp",
+      "again": "En envoyer un autre"
+    },
+    "form": {
+      "eyebrow": "Demander une démo",
+      "name_label": "Ton nom",
+      "name_ph": "Aoife Kennedy",
+      "email_label": "E-mail",
+      "email_ph": "aoife@crowingcock.com",
+      "venue_label": "Nom de l'établissement",
+      "venue_ph": "The Crowing Cock",
+      "vtype_label": "Type d'établissement",
+      "vtype_restaurant": "Restaurant",
+      "vtype_pub": "Pub",
+      "vtype_cafe": "Café",
+      "vtype_other": "Autre",
+      "phone_label": "Téléphone",
+      "optional": "(facultatif)",
+      "phone_ph": "+33 …",
+      "message_label": "Quelque chose à nous signaler ?",
+      "message_ph": "Taille de la carte, site actuel, tout ce que tu aimerais voir précisément lors de la démo…",
+      "menuurl_label": "Menu numérique actuel",
+      "menuurl_ph": "https://tonmenu.fr",
+      "menufile_label": "Liste des plats",
+      "menufile_ph": "Importer un PDF ou Excel",
+      "menufile_hint": "PDF, .xls ou .xlsx",
+      "disclaimer": "On veut juste en savoir plus sur ton établissement. Pas de liste marketing.",
+      "submit": "Demander une démo →"
+    },
+    "side": {
+      "chat_label": "Tu préfères discuter ?",
+      "chat_body": "Plus rapide que l'e-mail. Nous répondons en général en moins d'une heure.",
+      "chat_btn": "Ouvrir WhatsApp",
+      "old_label": "Ou, à l'ancienne",
+      "email_label": "E-mail",
+      "phone_label": "Téléphone",
+      "phone_calls_label": "Appels téléphoniques",
+      "phone_lang_en": "· Anglais",
+      "phone_lang_es": "· Espagnol"
+    }
+  },
+  "errors": {
+    "name": "Ton nom est requis.",
+    "email_required": "L'e-mail est requis.",
+    "email_invalid": "Cet e-mail ne semble pas correct.",
+    "venue": "Le nom de l'établissement est requis."
+  },
+  "footer": {
+    "tagline": "Cartes numériques et tableaux de bord pour les restaurants, pubs et cafés qui prennent leur cuisine au sérieux.",
+    "col_product": "Produit",
+    "col_company": "Entreprise",
+    "col_contact": "Contact",
+    "rights": "© 2026 Dimonova. Tous droits réservés."
+  },
+  "wa": {
+    "name": "Équipe Dimonova",
+    "status": "Réponse en général sous une heure",
+    "greeting": "Bonjour 👋 — quel type d'établissement gères-tu ? On te montre volontiers un aperçu du tableau de bord en 30 secondes.",
+    "chip_restaurant": "Je gère un restaurant",
+    "chip_pub": "Je gère un pub",
+    "chip_cafe": "Je gère un café",
+    "continue": "Continuer vers WhatsApp",
+    "disclaimer": "+353 (0)1 555 0199 · prototype, ne s'ouvrira pas vraiment"
+  }
+}
