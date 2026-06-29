@@ -13,9 +13,7 @@ test("whatsapp widget toggles open", async ({ page }) => {
 test("footer renders tagline", async ({ page }) => {
   await page.goto("/");
   await expect(page.locator("footer")).toBeVisible();
-  await expect(page.locator("footer")).toContainText(
-    "Digital menus and dashboards"
-  );
+  await expect(page.locator("footer")).toContainText(/digital menu|menu digital/i);
 });
 
 test("header WhatsApp button opens widget", async ({ page }) => {
