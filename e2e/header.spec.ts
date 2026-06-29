@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("nav links route to real pages", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("link", { name: "Features" }).click();
+  await page.getByRole("navigation").getByRole("link", { name: "Features" }).click();
   await expect(page).toHaveURL("/features");
 });
 

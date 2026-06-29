@@ -4,6 +4,8 @@ import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/lib/routing";
 import "../globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -26,6 +28,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <Header />
           {children}
+          <Footer />
+          <WhatsAppWidget />
         </NextIntlClientProvider>
       </body>
     </html>

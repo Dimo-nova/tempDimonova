@@ -70,6 +70,9 @@ export default function Header() {
             as="button"
             base="font:500 13px/1 'Instrument Sans',sans-serif;color:#1F1814;padding:10px 14px;display:inline-flex;align-items:center;gap:8px;border:1px solid #E8E0D2;border-radius:999px;background:#FAF6F0"
             hover="background:#F1E8DA"
+            onClick={() =>
+              window.dispatchEvent(new CustomEvent("dimonova:open-wa"))
+            }
           >
             <span
               style={s(
