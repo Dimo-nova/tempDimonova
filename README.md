@@ -4,60 +4,42 @@ The marketing website for **Dimonova** — done-for-you digital menus for
 restaurants, pubs and cafés. We build, style, host and run the menu; the venue
 just changes a dish in a couple of taps.
 
-It's a fast, lightweight site with six pages — **Home, Features, Pricing,
-Case studies, About,** and **Contact** — including a contact/demo-request form
-and a WhatsApp chat widget.
+Six pages — **Home, Features, Pricing, Case studies, About,** and **Contact** —
+with a contact/demo-request form and a WhatsApp chat widget. Available in five
+languages: English, Spanish, German, French, and Portuguese.
 
-## See it locally
-
-You don't need to install anything to look at it — just open `index.html` in a
-web browser.
-
-To run it on a local web address (recommended, so everything behaves exactly as
-it will live):
+## Run locally
 
 ```bash
-npm run dev
+npm install
+npm run dev        # starts on http://localhost:3100
 ```
 
-Then open the address it prints (usually <http://localhost:3000>).
+## Publish
 
-## Put it online
-
-The site is hosted on **Vercel**. To publish:
+Hosted on **Vercel**. To publish:
 
 ```bash
-vercel            # creates a private preview link to share
+vercel            # creates a private preview link
 vercel --prod     # publishes to the live site
 ```
 
-(You'll need the Vercel CLI installed and to be logged in: `npm i -g vercel`
-then `vercel login`.)
+(Needs the Vercel CLI: `npm i -g vercel && vercel login`.)
 
 ## What still needs doing before launch
 
-There's a checklist in **[`TODO.md`](./TODO.md)** — the main things are:
+There's a checklist in **[`TODO.md`](./TODO.md)**. Main items:
 
-- **Real content** — the case studies, testimonials, team members, venue logos
-  and all the placeholder images are stand-ins. They're meant to be swapped for
-  the real thing.
-- **The contact form** currently shows a "thanks, we'll be in touch" message but
-  doesn't actually send anywhere yet — it needs connecting to email.
-- **The WhatsApp button** is a preview and doesn't open a real chat yet.
-- **Contact details and prices** (`hello@dimonova.com`, the phone number,
-  "From €600 / €45 a month") should be double-checked and updated.
+- **Real content** — case studies, testimonials, team members, venue logos, and placeholder images need swapping for real content
+- **Translated copy** — SEO titles/descriptions and body copy are currently English in all locales; translations needed for es/de/fr/pt
+- **Contact form backend** — currently shows a success message but doesn't send anywhere yet
+- **`og:image`** — social share image not yet set
 
-## What's in here
+## Tech
 
-The visitor-facing site is just three files: `index.html`, `styles.css` and
-`app.js`. Everything else (files starting with `_`, plus `CLAUDE.md`) is for
-development and isn't part of the published site.
+Next.js 16, TypeScript, App Router, SSG. `next-intl` for i18n (5 locales,
+English at root `/`, others at `/{locale}/`). Inline styles via a small
+`s(css)` helper that parses CSS strings into React style objects.
 
-If you're a developer (or an AI assistant) picking this up, start with
-**[`CLAUDE.md`](./CLAUDE.md)** — it explains how the site is structured, how it's
-generated from the original design, and how to test changes.
-
-## Tech, briefly
-
-Plain HTML, CSS and JavaScript — no framework, no build step needed to run.
-It was built from a Claude Design export and deploys as a static site.
+The original static HTML/CSS/JS site lives in `archive/` as source of truth
+for markup and content. Developer notes are in **[`CLAUDE.md`](./CLAUDE.md)**.
