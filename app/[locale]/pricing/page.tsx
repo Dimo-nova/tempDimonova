@@ -1,0 +1,20 @@
+import { setRequestLocale } from "next-intl/server";
+import PricingHero from "@/components/sections/PricingHero";
+import PricingIncluded from "@/components/sections/PricingIncluded";
+import PricingShape from "@/components/sections/PricingShape";
+import PricingStrip from "@/components/sections/PricingStrip";
+import PricingFaq from "@/components/sections/PricingFaq";
+
+export default async function PricingPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return (
+    <main>
+      <PricingHero />
+      <PricingIncluded />
+      <PricingShape />
+      <PricingStrip />
+      <PricingFaq />
+    </main>
+  );
+}
