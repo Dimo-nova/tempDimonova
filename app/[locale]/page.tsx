@@ -1,8 +1,26 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
+import Hero from "@/components/sections/Hero";
+import LogoStrip from "@/components/sections/LogoStrip";
+import FeaturesSummary from "@/components/sections/FeaturesSummary";
+import HowItWorks from "@/components/sections/HowItWorks";
+import Differentiator from "@/components/sections/Differentiator";
+import SocialProof from "@/components/sections/SocialProof";
+import PricingTeaser from "@/components/sections/PricingTeaser";
+import HomeCta from "@/components/sections/HomeCta";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations();
-  return <main>{t("nav.home")}</main>;
+  return (
+    <main>
+      <Hero />
+      <LogoStrip />
+      <FeaturesSummary />
+      <HowItWorks />
+      <Differentiator />
+      <SocialProof />
+      <PricingTeaser />
+      <HomeCta />
+    </main>
+  );
 }
