@@ -14,13 +14,32 @@ const vtypeMap: Record<string, string> = {
 };
 
 export async function POST(req: NextRequest) {
-  const { name, email, venue, vtype, phone, message, menuUrl, locale } =
-    await req.json();
+  const fd = await req.formData();
 
-  if (!name?.trim() || !email?.trim() || !venue?.trim()) {
+  const name = (fd.get("name") as string)?.trim();
+  const email = (fd.get("email") as string)?.trim();
+  const venue = (fd.get("venue") as string)?.trim();
+  const vtype = (fd.get("vtype") as string) ?? "other";
+  const phone = (fd.get("phone") as string)?.trim() ?? "";
+  const message = (fd.get("message") as string)?.trim() ?? "";
+  const menuUrl = (fd.get("menuUrl") as string)?.trim() ?? "";
+  const locale = (fd.get("locale") as string) ?? "es";
+  const menuFile = fd.get("menuFile") as File | null;
+
+  if (!name || !email || !venue) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
+  // Prepare file attachment for email
+  let attachments: { filename: string; content: Buffer }[] = [];
+  let fileNote = "";
+  if (menuFile && menuFile.size > 0) {
+    const bytes = await menuFile.arrayBuffer();
+    attachments = [{ filename: menuFile.name, content: Buffer.from(bytes) }];
+    fileNote = menuFile.name;
+  }
+
+  // Notion record
   try {
     await notion.pages.create({
       parent: { database_id: DB_ID },
@@ -32,15 +51,23 @@ export async function POST(req: NextRequest) {
         ...(phone ? { Teléfono: { phone_number: phone } } : {}),
         ...(message ? { Mensaje: { rich_text: [{ text: { content: message } }] } } : {}),
         ...(menuUrl ? { "URL menú actual": { url: menuUrl } } : {}),
+        ...(fileNote ? { Mensaje: { rich_text: [{ text: { content: (message ? message + "\n\n" : "") + `Archivo adjunto: ${fileNote}` } }] } } : {}),
         Estado: { select: { name: "Nuevo" } },
-        Idioma: { rich_text: [{ text: { content: locale ?? "es" } }] },
+        Idioma: { rich_text: [{ text: { content: locale } }] },
       },
     });
+  } catch (err) {
+    console.error("[contact] Notion error:", err);
+    return NextResponse.json({ error: "notion_error", detail: String(err) }, { status: 500 });
+  }
 
+  // Email notification
+  try {
     await resend.emails.send({
       from: "Dimonova Web <noreply@dimonova.com>",
       to: "pablo@dimonova.com",
       subject: `Nuevo lead: ${venue} — ${name}`,
+      attachments,
       html: `
         <h2 style="font-family:sans-serif">Nuevo lead desde dimonova.com</h2>
         <table style="font-family:sans-serif;font-size:14px;border-collapse:collapse">
@@ -51,14 +78,15 @@ export async function POST(req: NextRequest) {
           ${phone ? `<tr><td style="padding:4px 12px 4px 0;color:#666">Teléfono</td><td>${phone}</td></tr>` : ""}
           ${message ? `<tr><td style="padding:4px 12px 4px 0;color:#666;vertical-align:top">Mensaje</td><td>${message}</td></tr>` : ""}
           ${menuUrl ? `<tr><td style="padding:4px 12px 4px 0;color:#666">Menú actual</td><td><a href="${menuUrl}">${menuUrl}</a></td></tr>` : ""}
+          ${fileNote ? `<tr><td style="padding:4px 12px 4px 0;color:#666">Archivo</td><td>${fileNote} (adjunto)</td></tr>` : ""}
           <tr><td style="padding:4px 12px 4px 0;color:#666">Idioma</td><td>${locale}</td></tr>
         </table>
       `,
     });
-
-    return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error("[contact] error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    console.error("[contact] Resend error:", err);
+    // Don't fail the request — lead already saved in Notion
   }
+
+  return NextResponse.json({ ok: true });
 }

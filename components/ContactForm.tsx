@@ -25,6 +25,7 @@ export default function ContactForm() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [menuUrl, setMenuUrl] = useState("");
+  const [menuFile, setMenuFile] = useState<File | null>(null);
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -43,11 +44,18 @@ export default function ContactForm() {
     setSubmitting(true);
     setSubmitError(false);
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, venue, vtype, phone, message, menuUrl, locale }),
-      });
+      const fd = new FormData();
+      fd.append("name", name);
+      fd.append("email", email);
+      fd.append("venue", venue);
+      fd.append("vtype", vtype);
+      fd.append("phone", phone);
+      fd.append("message", message);
+      fd.append("menuUrl", menuUrl);
+      fd.append("locale", locale);
+      if (menuFile) fd.append("menuFile", menuFile);
+
+      const res = await fetch("/api/contact", { method: "POST", body: fd });
       if (res.ok) {
         setSubmitted(true);
       } else {
@@ -67,6 +75,7 @@ export default function ContactForm() {
     setPhone("");
     setMessage("");
     setMenuUrl("");
+    setMenuFile(null);
     setVtype("restaurant");
     setErrors({});
     setSubmitted(false);
@@ -273,8 +282,15 @@ export default function ContactForm() {
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={s("flex-shrink:0;color:#8A7E70")}>
                       <path d="M8 1v9M4.5 5.5 8 2l3.5 3.5M2 11.5V14h12v-2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span style={s("font:400 14px/1 'Instrument Sans',sans-serif;color:#8A7E70")}>{t("contact.form.menufile_ph")}</span>
-                    <input type="file" name="menu_file" accept=".pdf,.xls,.xlsx" style={s("display:none")} />
+                    <span style={s(`font:400 14px/1 'Instrument Sans',sans-serif;color:${menuFile ? "#1F1814" : "#8A7E70"}`)}>
+                      {menuFile ? menuFile.name : t("contact.form.menufile_ph")}
+                    </span>
+                    <input
+                      type="file"
+                      accept=".pdf,.xls,.xlsx"
+                      style={s("display:none")}
+                      onChange={(e) => setMenuFile(e.target.files?.[0] ?? null)}
+                    />
                   </label>
                   <div style={s("font:400 11px/1.4 'Instrument Sans',sans-serif;color:#B8A89A;margin-top:6px")}>{t("contact.form.menufile_hint")}</div>
                 </div>
