@@ -55,7 +55,6 @@ export default function Header() {
         >
           <NavLink href="/features">{t("nav.features")}</NavLink>
           <NavLink href="/pricing">{t("nav.pricing")}</NavLink>
-          <NavLink href="/cases">{t("nav.cases")}</NavLink>
           <NavLink href="/about">{t("nav.about")}</NavLink>
           <NavLink href="/contact">{t("nav.contact")}</NavLink>
         </nav>

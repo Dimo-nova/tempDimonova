@@ -74,9 +74,6 @@ export default async function Footer() {
               <Link href="/pricing" style={s("text-align:left;color:#FAF6F0")}>
                 {t("nav.pricing")}
               </Link>
-              <Link href="/cases" style={s("text-align:left;color:#FAF6F0")}>
-                {t("nav.cases")}
-              </Link>
             </div>
           </div>
 

@@ -5,7 +5,7 @@ import LogoStrip from "@/components/sections/LogoStrip";
 import FeaturesSummary from "@/components/sections/FeaturesSummary";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Differentiator from "@/components/sections/Differentiator";
-import SocialProof from "@/components/sections/SocialProof";
+// import SocialProof from "@/components/sections/SocialProof";
 import PricingTeaser from "@/components/sections/PricingTeaser";
 import HomeCta from "@/components/sections/HomeCta";
 
@@ -24,7 +24,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <FeaturesSummary />
       <HowItWorks />
       <Differentiator />
-      <SocialProof />
+      {/* <SocialProof /> */}
       <PricingTeaser />
       <HomeCta />
     </main>

@@ -130,13 +130,6 @@ export default function MobileNav() {
               </NavLink>
             </div>
             <div onClick={close}>
-              <NavLink href="/cases">
-                <div style={s("text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA;color:#1F1814")}>
-                  {t("nav.cases")}
-                </div>
-              </NavLink>
-            </div>
-            <div onClick={close}>
               <NavLink href="/about">
                 <div style={s("text-align:left;padding:14px 6px;border-bottom:1px solid #F1E8DA;color:#1F1814")}>
                   {t("nav.about")}
