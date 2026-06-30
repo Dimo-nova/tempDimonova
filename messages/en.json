@@ -353,6 +353,8 @@
     "col_product": "Product",
     "col_company": "Company",
     "col_contact": "Contact",
+    "label_ie": "(Ireland)",
+    "label_es": "(Spain)",
     "rights": "© 2026 Dimonova. All rights reserved."
   },
   "wa": {

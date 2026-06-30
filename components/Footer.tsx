@@ -26,9 +26,9 @@ export default async function Footer() {
               style={s("display:flex;align-items:center;margin-bottom:18px")}
             >
               <img
-                src="/assets/dimonova-logo.png"
+                src="/assets/logo_horizontal.svg"
                 alt="Dimonova"
-                style={s("height:28px;width:auto;display:block")}
+                style={s("height:60px;width:auto;display:block")}
               />
             </Link>
             <p
@@ -118,8 +118,8 @@ export default async function Footer() {
               )}
             >
               <div>{CONTACT.email}</div>
-              <div>{CONTACT.phoneIE}</div>
-              <div>{CONTACT.phoneES}</div>
+              <div>{CONTACT.phoneIE} <span style={s("color:#8A7E70;font-size:12px")}>{t("footer.label_ie")}</span></div>
+              <div>{CONTACT.phoneES} <span style={s("color:#8A7E70;font-size:12px")}>{t("footer.label_es")}</span></div>
             </div>
           </div>
         </div>

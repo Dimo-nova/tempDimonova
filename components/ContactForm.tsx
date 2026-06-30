@@ -68,11 +68,11 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="dim-pad-h" style={s("max-width:1240px;margin:0 auto;padding:32px 40px 120px")}>
+    <section className="dim-pad-h dim-form-outer" style={s("max-width:1240px;margin:0 auto;padding:32px 40px 120px")}>
       <div className="dim-hero-grid" style={s("display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:start")}>
 
         {/* FORM */}
-        <div style={s("background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:40px")}>
+        <div className="dim-form-inner" style={s("background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:40px")}>
           {submitted ? (
             /* Success state */
             <div className="dim-pop" style={s("padding:32px 0;text-align:center")}>

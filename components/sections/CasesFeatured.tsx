@@ -6,7 +6,7 @@ export default async function CasesFeatured() {
   return (
     <section className="dim-pad-h" style={s("max-width:1240px;margin:0 auto;padding:32px 40px 24px")}>
       <div style={s("background:#fff;border:1px solid #E8E0D2;border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr")} className="dim-hero-grid">
-        <div style={s("padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between")}>
+        <div className="dim-feat-inner" style={s("padding:48px 44px;display:flex;flex-direction:column;justify-content:space-between")}>
           <div>
             <div style={s("font:500 11px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#B8523A;margin-bottom:14px")}>{t("cases.featured.eyebrow")}</div>
             <div style={s("font:400 36px/1.15 'Instrument Sans',sans-serif;color:#1F1814;letter-spacing:-.025em;margin-bottom:14px;text-wrap:balance")}>{t("cases.featured.quote")}</div>

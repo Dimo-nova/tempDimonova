@@ -11,6 +11,7 @@ const FLAGS: Record<string, string> = { en: "gb", es: "es", de: "de", fr: "fr", 
 export default function MobileNav() {
   const t = useTranslations();
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -20,29 +21,81 @@ export default function MobileNav() {
   }
 
   function pickLang(code: string) {
-    close();
+    setLangOpen(false);
     router.replace(pathname, { locale: code });
   }
 
   return (
     <>
-      {/* Hamburger button — shown via .dim-show-md CSS (display:none on desktop) */}
-      <button
-        onClick={() => setOpen((o) => !o)}
+      {/* Always-visible row on mobile: lang toggle + hamburger */}
+      <div
         className="dim-show-md"
-        style={s(
-          "display:none;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #E8E0D2;border-radius:10px;background:#FAF6F0"
-        )}
-        aria-label="Open menu"
+        style={s("display:none;align-items:center;gap:8px")}
       >
-        <div style={s("display:flex;flex-direction:column;gap:4px")}>
-          <div style={s("width:18px;height:1.5px;background:#1F1814")} />
-          <div style={s("width:18px;height:1.5px;background:#1F1814")} />
-          <div style={s("width:14px;height:1.5px;background:#1F1814")} />
-        </div>
-      </button>
+        {/* Current locale button — expands lang picker */}
+        <button
+          onClick={() => { setLangOpen((o) => !o); setOpen(false); }}
+          style={s(
+            "display:inline-flex;align-items:center;gap:6px;padding:8px 11px;border:1px solid #E8E0D2;border-radius:999px;background:#FAF6F0;font:500 12px/1 'Instrument Sans',sans-serif;color:#1F1814"
+          )}
+          aria-label="Switch language"
+        >
+          <img
+            src={`https://flagcdn.com/16x12/${FLAGS[locale]}.png`}
+            alt=""
+            width={16}
+            height={12}
+            style={s("display:block;border-radius:2px")}
+          />
+          <span>{locale.toUpperCase()}</span>
+        </button>
 
-      {/* Mobile nav panel */}
+        {/* Hamburger */}
+        <button
+          onClick={() => { setOpen((o) => !o); setLangOpen(false); }}
+          style={s(
+            "display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid #E8E0D2;border-radius:10px;background:#FAF6F0"
+          )}
+          aria-label="Open menu"
+        >
+          <div style={s("display:flex;flex-direction:column;gap:4px")}>
+            <div style={s("width:18px;height:1.5px;background:#1F1814")} />
+            <div style={s("width:18px;height:1.5px;background:#1F1814")} />
+            <div style={s("width:14px;height:1.5px;background:#1F1814")} />
+          </div>
+        </button>
+      </div>
+
+      {/* Language picker dropdown */}
+      {langOpen && (
+        <div
+          className="dim-pop"
+          style={s(
+            "position:absolute;top:100%;right:16px;padding:12px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:14px;z-index:51;display:flex;gap:8px;flex-wrap:wrap;box-shadow:0 8px 24px -8px rgba(31,24,20,.16)"
+          )}
+        >
+          {Object.keys(FLAGS).map((code) => (
+            <button
+              key={code}
+              onClick={() => pickLang(code)}
+              style={s(
+                `display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid ${code === locale ? "#B8523A" : "#E8E0D2"};background:${code === locale ? "#B8523A" : "transparent"};color:${code === locale ? "#FAF6F0" : "#1F1814"};font:500 13px/1 'Instrument Sans',sans-serif`
+              )}
+            >
+              <img
+                alt=""
+                width={16}
+                height={12}
+                src={`https://flagcdn.com/16x12/${FLAGS[code]}.png`}
+                style={s("display:block;border-radius:2px")}
+              />
+              {code.toUpperCase()}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Nav panel */}
       {open && (
         <div
           className="dim-pop"
@@ -97,29 +150,6 @@ export default function MobileNav() {
                 </div>
               </NavLink>
             </div>
-          </div>
-
-          {/* Language pills */}
-          <div style={s("display:flex;gap:8px;flex-wrap:wrap;margin-top:16px")}>
-            {Object.keys(FLAGS).map((code) => (
-              <button
-                key={code}
-                data-lang={code}
-                onClick={() => pickLang(code)}
-                style={s(
-                  `display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;border:1px solid ${code === locale ? "#B8523A" : "#E8E0D2"};background:${code === locale ? "#B8523A" : "transparent"};color:${code === locale ? "#FAF6F0" : "#1F1814"};font:500 13px/1 'Instrument Sans',sans-serif`
-                )}
-              >
-                <img
-                  alt=""
-                  width={16}
-                  height={12}
-                  src={`https://flagcdn.com/16x12/${FLAGS[code]}.png`}
-                  style={s("display:block;border-radius:2px")}
-                />
-                {code.toUpperCase()}
-              </button>
-            ))}
           </div>
         </div>
       )}

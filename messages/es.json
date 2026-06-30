@@ -30,7 +30,7 @@
       "updates": "Cambios esta semana"
     },
     "logos": {
-      "label": "La confían locales independientes",
+      "label": "Locales que ya confían en Dimonova",
       "placeholder": "logo del local"
     },
     "feat": {
@@ -353,6 +353,8 @@
     "col_product": "Producto",
     "col_company": "Empresa",
     "col_contact": "Contacto",
+    "label_ie": "(Irlanda)",
+    "label_es": "(España)",
     "rights": "© 2026 Dimonova. Todos los derechos reservados."
   },
   "wa": {
