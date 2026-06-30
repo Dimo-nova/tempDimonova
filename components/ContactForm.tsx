@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { s } from "@/lib/style";
 import Hover from "./Hover";
 import { CONTACT } from "@/lib/config";
@@ -17,16 +17,19 @@ interface Errors {
 
 export default function ContactForm() {
   const t = useTranslations();
+  const locale = useLocale();
   const [vtype, setVtype] = useState<Vtype>("restaurant");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [venue, setVenue] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [menuUrl, setMenuUrl] = useState("");
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const next: Errors = {};
     if (!name.trim()) next.name = t("errors.name");
@@ -34,8 +37,18 @@ export default function ContactForm() {
     else if (!EMAIL_RE.test(email)) next.email = t("errors.email_invalid");
     if (!venue.trim()) next.venue = t("errors.venue");
     setErrors(next);
-    if (Object.keys(next).length === 0) {
-      setSubmitted(true);
+    if (Object.keys(next).length > 0) return;
+
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, venue, vtype, phone, message, menuUrl, locale }),
+      });
+      if (res.ok) setSubmitted(true);
+    } finally {
+      setSubmitting(false);
     }
   }
 
@@ -45,6 +58,7 @@ export default function ContactForm() {
     setVenue("");
     setPhone("");
     setMessage("");
+    setMenuUrl("");
     setVtype("restaurant");
     setErrors({});
     setSubmitted(false);
@@ -232,6 +246,8 @@ export default function ContactForm() {
                     id="cf-menuurl"
                     type="url"
                     name="menu_url"
+                    value={menuUrl}
+                    onChange={(e) => setMenuUrl(e.target.value)}
                     placeholder={t("contact.form.menuurl_ph")}
                     style={s("width:100%;padding:14px 16px;background:#FAF6F0;border:1px solid #E8E0D2;border-radius:10px;font:400 14px/1 'Instrument Sans',sans-serif;color:#1F1814;transition:border-color .15s,box-shadow .15s;box-sizing:border-box")}
                   />
@@ -280,10 +296,10 @@ export default function ContactForm() {
                   <Hover
                     as="button"
                     type="submit"
-                    base="font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:15px 24px;border-radius:999px;transition:background .15s,transform .15s;cursor:pointer"
+                    base={`font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:15px 24px;border-radius:999px;transition:background .15s,transform .15s;cursor:pointer;opacity:${submitting ? ".6" : "1"}`}
                     hover="background:#9B4530;transform:translateY(-1px)"
                   >
-                    {t("contact.form.submit")}
+                    {submitting ? "…" : t("contact.form.submit")}
                   </Hover>
                 </div>
 
