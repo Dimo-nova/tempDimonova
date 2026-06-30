@@ -32,9 +32,8 @@ export default async function Differentiator() {
         <div style={s("position:relative")}>
           {/* product shot placeholder card */}
           <div style={s("background:#fff;border:1px solid #E8E0D2;border-radius:20px;padding:14px;box-shadow:0 30px 60px -28px rgba(31,24,20,.2)")}>
-            <div style={s("aspect-ratio:4/3;border-radius:12px;background:repeating-linear-gradient(45deg,#F4ECDE,#F4ECDE 8px,#EAE0CC 8px,#EAE0CC 16px);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden")}>
-              <div style={s("position:absolute;top:14px;left:14px;font:500 10px/1 'Instrument Sans',sans-serif;letter-spacing:.2em;color:#8A7E70;text-transform:uppercase")}>{t("home.diff.card_badge")}</div>
-              <div style={s("background:#1F1814;color:#FAF6F0;padding:10px 16px;border-radius:999px;font:500 12px/1 'Instrument Sans',sans-serif")}>{t("home.diff.card_pill")}</div>
+            <div style={s("aspect-ratio:4/3;border-radius:12px;overflow:hidden")}>
+              <img src="/assets/servicio.png" alt="" style={s("width:100%;height:100%;object-fit:cover;display:block")} />
             </div>
             <div style={s("display:flex;justify-content:space-between;align-items:center;padding:14px 6px 4px")}>
               <div>
