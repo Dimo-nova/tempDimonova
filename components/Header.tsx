@@ -36,28 +36,28 @@ export default function Header() {
           "max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;position:relative"
         )}
       >
-        {/* Logo */}
-        <Link href="/" style={s("display:flex;align-items:center")}>
-          <img
-            src="/assets/logo_horizontal.svg"
-            alt="Dimonova"
-            height={60}
-            width={150}
-          />
-        </Link>
-
-        {/* Desktop nav */}
-        <nav
-          className="dim-hide-md"
-          style={s(
-            "display:flex;gap:32px;align-items:center;font:500 14px/1 'Instrument Sans',sans-serif"
-          )}
-        >
-          <NavLink href="/features">{t("nav.features")}</NavLink>
-          <NavLink href="/pricing">{t("nav.pricing")}</NavLink>
-          <NavLink href="/about">{t("nav.about")}</NavLink>
-          <NavLink href="/contact">{t("nav.contact")}</NavLink>
-        </nav>
+        {/* Logo + Desktop nav */}
+        <div style={s("display:flex;align-items:center;gap:36px")}>
+          <Link href="/" style={s("display:flex;align-items:center")}>
+            <img
+              src="/assets/logo_horizontal.svg"
+              alt="Dimonova"
+              height={60}
+              width={150}
+            />
+          </Link>
+          <nav
+            className="dim-hide-md"
+            style={s(
+              "display:flex;gap:28px;align-items:center;font:500 14px/1 'Instrument Sans',sans-serif"
+            )}
+          >
+            <NavLink href="/features">{t("nav.features")}</NavLink>
+            <NavLink href="/pricing">{t("nav.pricing")}</NavLink>
+            <NavLink href="/about">{t("nav.about")}</NavLink>
+            <NavLink href="/contact">{t("nav.contact")}</NavLink>
+          </nav>
+        </div>
 
         {/* Desktop right area: lang switcher + WhatsApp + demo CTA */}
         <div
