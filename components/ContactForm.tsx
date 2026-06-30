@@ -28,6 +28,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -40,13 +41,20 @@ export default function ContactForm() {
     if (Object.keys(next).length > 0) return;
 
     setSubmitting(true);
+    setSubmitError(false);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, venue, vtype, phone, message, menuUrl, locale }),
       });
-      if (res.ok) setSubmitted(true);
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(true);
+      }
+    } catch {
+      setSubmitError(true);
     } finally {
       setSubmitting(false);
     }
@@ -293,14 +301,21 @@ export default function ContactForm() {
                 {/* Footer: disclaimer + submit */}
                 <div style={s("display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px")}>
                   <div style={s("font:400 12px/1.5 'Instrument Sans',sans-serif;color:#8A7E70;max-width:280px")}>{t("contact.form.disclaimer")}</div>
-                  <Hover
-                    as="button"
-                    type="submit"
-                    base={`font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:15px 24px;border-radius:999px;transition:background .15s,transform .15s;cursor:pointer;opacity:${submitting ? ".6" : "1"}`}
-                    hover="background:#9B4530;transform:translateY(-1px)"
-                  >
-                    {submitting ? "…" : t("contact.form.submit")}
-                  </Hover>
+                  <div style={s("display:flex;flex-direction:column;align-items:flex-end;gap:8px")}>
+                    {submitError && (
+                      <div style={s("font:400 12px/1.4 'Instrument Sans',sans-serif;color:#B8523A")}>
+                        Error al enviar — inténtalo de nuevo o escríbenos por WhatsApp.
+                      </div>
+                    )}
+                    <Hover
+                      as="button"
+                      type="submit"
+                      base={`font:600 14px/1 'Instrument Sans',sans-serif;color:#FAF6F0;background:#B8523A;padding:15px 24px;border-radius:999px;transition:background .15s,transform .15s;cursor:pointer;opacity:${submitting ? ".6" : "1"}`}
+                      hover="background:#9B4530;transform:translateY(-1px)"
+                    >
+                      {submitting ? "…" : t("contact.form.submit")}
+                    </Hover>
+                  </div>
                 </div>
 
               </div>
