@@ -34,4 +34,8 @@
     .dim-shape-inner{padding:28px 20px!important}
     .dim-form-outer{padding-bottom:60px!important}
     .dim-form-inner{padding:24px 20px!important}
+    .dim-how-quote{flex-direction:column!important;align-items:flex-start!important;gap:20px!important}
+    .dim-logo-scroll{display:flex!important;overflow-x:auto;justify-content:flex-start!important;max-width:none!important;scrollbar-width:none;-ms-overflow-style:none;padding-bottom:4px}
+    .dim-logo-scroll::-webkit-scrollbar{display:none}
+    .dim-logo-scroll>img{flex-shrink:0}
   }

@@ -34,7 +34,7 @@ export default async function HowItWorks() {
           </div>
         </div>
 
-        <div style={s("margin-top:64px;display:flex;align-items:center;gap:16px;padding-top:32px;border-top:1px solid #3A2F26")}>
+        <div className="dim-how-quote" style={s("margin-top:64px;display:flex;align-items:center;gap:16px;padding-top:32px;border-top:1px solid #3A2F26")}>
           <div style={s("font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;color:#FAF6F0;flex:1;max-width:680px;line-height:1.4")}>{t("home.how.quote")}</div>
           <Hover
             as="button"
